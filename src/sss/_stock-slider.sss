@@ -1,0 +1,99 @@
+.main-sliders
+	position: relative
+
+	&__cont
+		background: var(--second-color)
+		padding: rem(76) 0 rem(102)
+
+	&__title
+		font-weight: bold
+		font-size: rem(24)
+		line-height: lh(22, 24)
+		transition: color .3s ease
+
+		&:not(.active)
+			cursor: pointer
+			color: rgba(198, 204, 219, .83)
+
+		&.active
+
+			+ .main-sliders__switcher
+
+				.sliders-switcher
+
+					&__circle
+						transform: translate3d(0, 0, 0)
+
+		&-cont
+			display: flex
+			align-items: center
+			margin-bottom: 49px
+
+	&__switcher
+		margin: 0 35px
+
+.stock-slider
+	position: relative
+	// overflow: hidden
+	
+	&:not(.active)
+		position: absolute 0
+		opacity: 0
+		pointer-events: none
+
+	.swiper
+
+		&-slide
+			height: auto
+			display: flex
+			flex-direction: column
+
+	> .stock-slider
+
+		&__slide
+			// float: left
+
+			&:nth-child(n + 4)
+				display: none !important
+
+	&__slide
+		display: flex
+		flex-direction: column
+		flex: 1 1 auto
+
+		.cat-item, .cat2__item
+			background: #fff
+			flex: 1 1 auto
+
+		.cat2__item
+			display: flex
+			flex-direction: column
+
+	.slick
+
+		&-arrow
+			background: url("../img/ico-black-arrow.png") no-repeat
+			size: width("../img/ico-black-arrow.png") height("../img/ico-black-arrow.png")
+			position: absolute
+			top: calc(50% - height("../img/ico-black-arrow.png") / 2)
+
+		&-prev
+			right: calc(100% + 33px)
+			transform: rotateY(180deg)
+
+		&-next
+			left: calc(100% + 33px)
+
+.sliders-switcher
+	cursor: pointer
+	size: 62px 31px
+	padding: 1px
+	background: #fff
+	border-radius: 20px
+
+	&__circle
+		size: 29px
+		border-radius: 50%
+		background: var(--main-color)
+		transition: transform .3s linear
+		transform: translate3d(100%, 0, 0)

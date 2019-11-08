@@ -1,0 +1,87 @@
+.contacts
+
+	&__subtitle
+		// font-weight: bold
+		// font-size: rem(20)
+		// line-height: lh(29, 20)
+		// margin-bottom: 23px
+
+	&__addresses
+		margin-bottom: rem(75)
+		display: none
+
+	&__map
+		margin: rem(90) 0 0
+
+.address-list
+	display: flex
+	flex-wrap: wrap
+
+	&__item
+		padding-top: 10px
+		padding-bottom: 23px
+
+		&:nth-child(odd)
+			padding-right: rem(120)
+			width: persent(490, 1140)
+
+			&:not(:last-child)
+				border-right: 1px solid var(--border-color)
+
+		&:nth-child(even)
+			display: flex
+			// justify-content: center
+			flex: 1 1 auto
+			padding-left: rem(120)
+
+		&-address, &-time
+			padding-left: 28px
+			display: block
+
+			&:not(:first-child)
+				margin: 13px 0 0
+		
+		&-time
+			// background: url("../img/ico-time.svg") left center no-repeat
+			// background-size: 14px auto !important
+
+		&-address
+			background: url("../img/ico-loc.svg") top 5px left no-repeat
+			background-size: 12px auto !important
+
+.deps
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: rem(-60)
+
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+		width: 33.33%
+		margin-bottom: rem(60)
+
+		&:nth-child(3n + 1), &:nth-child(3n)
+			border-left: 1px solid var(--border-color)
+
+		&:nth-child(3n + 1), &:nth-child(3n), &:last-child
+			border-right: 1px solid var(--border-color)
+
+		&:nth-child(3n + 1):last-child
+			border-right: none
+
+.dep
+	flex: 1 1 auto
+
+	&__title
+		font-weight: bold
+		font-size: rem(16)
+		line-height: lh(29, 16)
+		margin-bottom: rem(21)
+
+	.f
+
+		&-phone, &-mail
+
+			&:not(:last-child)
+				margin-bottom: 1rem

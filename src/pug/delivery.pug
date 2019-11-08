@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title О нас
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		
+		main#content
+			.inner-content__cont
+				.wrapper
+					.title-block
+						.title-block__crumbs
+							ul.bread-crumbs
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Главная" itemprop="url")
+										span(itemprop="title") Главная
+								li.bread-crumbs__this О нас
+						.title-block__title
+							h1 О нас
+					.inner-content
+						.delivery
+							.delivery__left
+								.delivery__text
+									.text-page
+										h3 Доставка собственным автотранспортом
+										p Для юридических лиц (и ИП) при сумме заказа 
+											b от 30 000 
+												i.rub ₽ 
+											| мы осуществляем бесплатную доставку сантехники по направлениям:
+										ul(data-columns="2")
+											each city in ["Челябинск и область", "Южноуральск - Троицк - Карталы", "Миасс", "Курган", "Магнитогорск - Куса", "Златоуст - Сатка - Юрюзань", "Сибай", "Екатеринбург", ]
+												li=city
+										br
+										p Если сумма вашего заказа меньше 
+											b 30 000 
+												i.rub ₽
+												| , 
+											| стоимость доставки составит:
+										ul
+											li по Челябинску - 
+												b(style="color: #037cd9") 300
+													i.rub ₽
+											li по Челябинской области - 
+												b(style="color: #037cd9") 500 
+													i.rub ₽
+										br
+										p
+											a.arrow-btn(href="#") График доставки по УРФО
+										br
+										br
+										h3 Доставка в Казахстан
+										p С сентября 2015 года осуществляется доставка в Казахстан, в города:
+										ul
+											li Костанай
+											li Рудный
+										br
+										blockquote По стоимости доставки и доставки в другие города можно узнать по телефону: 
+											a(href="tel: +7 (351) 729-88-58") +7 (351) 729-88-58
+										br
+										br
+										h3 Доставка транспортными компаниями
+										p При отгрузке в другие регионы, мы осуществляем доставку транспортными компаниями. 
+											br 
+											| Доставку сантехники до транспортной компании мы осуществляем бесплатно. 
+										br
+										br
+										h3 Контейнерные перевозки
+										p При больших объемах мы можем поставлять сантехнику 20 и 40 футовыми контейнерами. 
+										p Сумма доставки рассчитывается индивидуально по каждому заказу, в зависимости от объема и станции получения.
+							aside.delivery__right
+								.delivery-banner(data-widget="sticky-holder")
+									.delivery-banner__title Индивидуальная доставка
+										br
+										| по запросу
+									.delivery-banner__text По всем вопросам доставки 
+										br
+										| в ваш город вы можете обратиться 
+										br
+										| к логистам.
+									.delivery-banner__phones
+										address.delivery-phones
+											a(href="tel: +7 (351) 729-88-58") +7 (351) 729-88-58
+											a(href="tel: +7 (902) 891-35-48") +7 (902) 891-35-48
+		include inc/footer.pug
+		include inc/scripts.pug

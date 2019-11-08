@@ -1,0 +1,110 @@
+aside.head__mobile-menu
+	nav.mobile-menu
+		.mobile-menu__search
+			.search-form
+				form(action="#")
+					input.search-form__text(type="search" placeholder="Поиск" required="")
+					input.search-form__submit(type="submit")
+		ul.mobile-menu__list
+			li.mobile-menu__item
+				a.mobile-menu__link.have-sub(href="#") Каталог
+					ul.submenu
+						- for (let i = 0; i < 5; i++)
+							li.submenu__item
+								a.submenu__link(href="#") Каталог
+			each item in ["О компании", "Новости", "Доставка", "Контакты", ]
+				li.mobile-menu__item
+					a.mobile-menu__link(href="#")=item
+		.mobile-menu__info
+			.mobile-menu__info-download
+				a.dl-btn(href="#") Скачать прайс
+			.mobile-menu__info-phone
+				address.f-phone
+					a(href="tel: +7 (351) 729-88-58") +7 (351) 729-88-58
+			.mobile-menu__info-mail
+				address.f-mail
+					a(href="mailto: tdsu@tdsu.ru") tdsu@tdsu.ru
+			.mobile-menu__info-address
+				address.f-address
+					span Челябинск, ул. Северо-Крымская, д. 18а
+header.head
+	.wrapper
+		.head__wrap
+			.head__logo
+				a.logo(href="#")
+					img(src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x")
+			nav.head__nav
+				ul.head-menu
+					li.head-menu__item
+						a.head-menu__link.have-sub.active(href="#") Каталог
+						nav.head-menu__submenu
+							ul.submenu
+								each title, i in ["Oventrop", "Ванны, поддоны и мойки", "Водонагреватели", "Газовое оборудование", "Гидрострелки и стальные коллекторы", "Для дома и дачи", "Запорная, регулирующая и предохранительная арматура", "Канализация", "Комплектующие для бытовой техники", "Котлы отопления", "Насосы", "Принадлежности для санитарной комнаты", "Рабочий инструмент", "Радиаторы отопления", "Санфаянс", "Сифоны, арматура и комплектующие", "Смесители", "Стальные элементы трубопровода", "Трубы и фитинги", "Теплый пол", "Фильтры", "Хозтовары и расходные материалы", ]
+									li.submenu__item
+										if (i == 0)
+											a.submenu__link.active(href="#")=title
+										else
+											a.submenu__link(href="#")=title
+					each item in ["О компании", "Новости", "Доставка", "Контакты", ]
+						li.head-menu__item
+							a.head-menu__link(href="#")=item
+			.head__download
+				a.dl-btn(href="#") Скачать прайс
+			.head__lc
+				.head-lc
+					a.head-lc__link(href="#") Войти / Регистрация
+			.head__burger
+				.burger
+					span
+	.head__bot
+		.wrapper
+			.head-bot
+				.head-bot__title
+					.head-title Сантехника оптом
+						br
+						| Комплектация строительства
+				.head-bot__search
+					.search-form
+						form(action="#")
+							input.search-form__text(type="search" placeholder="Поиск" required="")
+							input.search-form__submit(type="submit")
+				.head-bot__phone
+					address.head-phone
+						a(href="tel: +7 (351) 729-88-58") +7 (351) 729-88-58
+				.head-bot__cart
+					.head-cart
+						a.head-cart__link(href="#" data-count="10") Корзина
+						.head-cart__popup
+							.popup-cart
+								.popup-cart__list
+									table.cart-table
+										tbody
+											each item in ["МП Калибратор с ножами для снятия фаски 16-20-25", "ППР малошум Крест 90 110x110x50 Левый 2 плоскости", "РЕХ инструмент запресовщик + расширитель Dn16-20 (DL1225)"]
+												tr
+													td.cart-table__img
+														.cart-item
+															a.cart-item__img(href="#")
+																img(src="img/photos/popup-cart-item.jpg" alt=item)
+													td.cart-table__name
+														.cart-item
+															a.cart-item__name(href="#")=item
+													td.cart-table__count(data-label="Количество")
+														.cart-item
+															.cart-item__counter
+																include counter.pug
+													td.cart-table__total(data-label="Стоимость")
+														.cart-item
+															.cart-item__total
+																.cat-item__price 151,00 
+																	i.rub ₽
+													td.cart-table__remove
+														.cart-item
+															.cart-item__remove
+																a.remove(href="#") Удалить
+								.popup-cart__footer
+									.popup-cart__footer-btn
+										a.arrow-btn(href="#") Перейти в корзину
+									.popup-cart__footer-summary
+										span Общая сумма: 
+										span.price 217,00
+											i.rub ₽

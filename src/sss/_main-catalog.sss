@@ -1,0 +1,183 @@
+.main-content
+	margin: 29px 0 0
+
+.main-catalog
+	display: flex
+	justify-content: space-between
+	padding: 0 0 32px
+
+	&__aside
+		width: 360px
+
+		display: none !important
+
+	&__right
+		width: calc(100% - 390px)
+		
+		width: 100%
+
+	&__aside, &__right, &__nav
+		display: flex
+		flex-direction: column
+
+	&__list
+		margin: 29px 0 0
+
+	&__nav
+		flex: 1 1 auto
+
+.main-cat
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+
+	&__item
+		flex: 1 1 auto
+		display: flex
+		flex-direction: column
+		position: relative
+
+		&:not(:last-child)
+			margin-bottom: 1px
+
+	&__link
+		display: flex
+		align-items: center
+		flex: 1 1 auto
+		min-height: 55px
+		padding: 12px 50px 11px 25px
+		background: var(--second-color)
+		transition: background .3s ease, color .3s ease
+
+		&:matches(:hover, :focus, .js__active)
+			// background: var(--mainColor)
+			color: var(--main-color)
+
+			&.have-sub
+
+				&:after
+					border-color: var(--main-color)
+
+			.hover-img
+				opacity: 1
+
+		&.js__active + .main-cat__submenu
+			opacity: 1
+			pointer-events: all
+
+		&-img
+			width: 38px
+			display: flex
+			align-items: center
+			justify-content: center
+			flex: none
+			margin-right: rem(23)
+			position: relative
+
+			.hover-img
+				position: absolute 0
+				margin: auto
+				transition: opacity .3s ease
+				opacity: 0
+
+		&.have-sub
+			position: relative
+
+			&:after
+				content: ""
+				position: absolute
+				border: 1px solid #000101
+				border-left: none
+				border-bottom: none
+				opacity: .4
+				size: 6px
+				transform: rotate(45deg)
+				right: 32px
+				top: calc(50% - 3px)
+				transition: border-color .3s ease
+
+.main-cat__submenu
+	position: absolute 0 * * 100%
+	z-index: 8
+	padding-left: 2px
+	transition: opacity .3s ease
+	opacity: 0
+	pointer-events: none
+	min-width: 300px
+	box-shadow: var(--box-shadow)
+
+	&.js__align-bot
+		top: auto
+		bottom: 0
+
+	li
+		background: var(--second-color)
+		padding: 13px rem(54)
+
+		&:first-child
+			padding-top: 26px
+
+		&:last-child
+			padding-bottom: 26px
+
+	a
+
+		&:matches(:hover, :focus, .active)
+			color: var(--main-color)
+
+	&__link
+		transition: color .3s ease
+
+		&:matches(:hover, :focus)
+			color: var(--main-color)
+
+.main-cat-block
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 -29px -29px
+
+	&__item
+		position: relative
+		width: calc((100% - 29px * 2) / 2)
+		margin: 0 0 29px 29px
+
+		&-desc
+			position: absolute 0
+			padding: 30px 120px 30px 39px
+
+		&-title
+			font-weight: bold
+			font-size: rem(22)
+			line-height: lh(29, 22)
+			max-width: 200px
+			display: inline-block
+
+			&:after
+				content: ""
+				position: absolute * * 41px 42px
+				background: url("../img/ico-black-arrow.svg") no-repeat
+				size: width("../img/ico-black-arrow.png") height("../img/ico-black-arrow.png")
+
+		&-list
+			margin: 15px 0 0
+
+			li
+
+				&:not(:first-child)
+					margin: 9px 0 0
+
+			a
+				color: #63656c
+				border-bottom: none
+
+				&:matches(:hover, :focus)
+					color: var(--main-color)
+
+		&-img
+
+			img
+				display: block
+				width: 100%
+				object-fit: cover
+				object-position: center right
+				height: 100%

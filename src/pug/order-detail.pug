@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Личный кабинет
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		
+		main#content
+			.inner-content__cont
+				.wrapper
+					.title-block
+						.title-block__crumbs
+							ul.bread-crumbs
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Главная" itemprop="url")
+										span(itemprop="title") Главная
+								li.bread-crumbs__this Личный кабинет
+						.title-block__title
+							h1 Личный кабинет
+					.inner-content
+						.lc
+							.lc__btns
+								.lc__btns-main
+									each btn, i in ["Мой кабинет", "Мои заказы", "Сменить пароль", ]
+										if (i == 1)
+											a.gray-btn.active(href="#")=btn
+										else
+											a.gray-btn(href="#")=btn
+								.lc__btns-exit
+									a.bordered-btn(href="#") Выход
+							.lc__content
+								.lc-orders
+									nav.lc-orders__menu
+										ul.orders-menu
+											each title, i in ["Текущие", "Завершенные", "Все", ]
+												li.orders-menu__item
+													if (i == 2)
+														a.orders-menu__link.active(href="#")=title
+													else
+														a.orders-menu__link(href="#")=title
+									.lc-orders__list
+										.orders-item
+											.orders-item__head
+												.orders-item__title="Заказ № 2"
+												.orders-item__date 14.04.2018
+												.orders-item__more
+													a(href="#") В список зказов
+											.orders-item__body
+												.detail-order
+													table.detail-order__table
+														tbody
+															tr
+																td Текущий статус:
+																td Выполнен (от 16.04.2018)
+															tr
+																td Сумма:
+																td 
+																	b 6 569,00 
+																		i.rub ₽ 
+															tr.detail-order__table-subtitle
+																td(colspan="2")
+																	span Данные вашей учетной записи
+															tr
+																td Логин:
+																td admin
+															tr
+																td E-Mail адрес:
+																td 
+																	a(href="mailto: web@xpage.ru") web@xpage.ru
+															tr.detail-order__table-subtitle
+																td(colspan="2")
+																	span Параметры заказа
+															tr
+																td Тип плательщика:
+																td Физическое лицо
+															tr.detail-order__table-subtitle
+																td(colspan="2")
+																	span Личные данные
+															tr
+																td Ф.И.О.:
+																td Иванов Иван Иванович
+															tr
+																td E-Mail:
+																td 
+																	a(href="mailto: pochta@ya.ru") pochta@ya.ru
+															tr
+																td Телефон:	
+																td 
+																	a(href="tel: 8 951 000 00 00") 8 951 000 00 00
+															tr.detail-order__table-subtitle
+																td(colspan="2")
+																	span Данные для доставки
+															tr
+																td Индекс:
+																td 454000
+															tr
+																td Город:
+																td Челябинск
+															tr
+																td Местоположение:
+																td Россия, Челябинская область
+															tr
+																td Адрес доставки:
+																td ул. Первомайская 93
+															tr.detail-order__table-subtitle
+																td(colspan="2")
+																	span Параметры доставки и оплаты
+															tr
+																td Платёжная система:
+																td Наличные курьеру (
+																	b 6 569,00 
+																		i.rub ₽ 
+																	| )
+															tr
+																td Оплачен:
+																td Да
+															tr.detail-order__table-subtitle
+																td(colspan="2")
+																	span Товары
+													.detail-order__list
+														.order-list
+															table.order-list__table
+																tbody
+																	- for (let i = 0; i < 5; i++)
+																		tr
+																			td
+																				a.d-order__img(href="#")
+																					img(src="img/photos/detail-order-img.jpg")
+																			td
+																				a.d-order__title(href="#") МП Калибратор с ножами для снятия фаски 16-20-25
+																			td 
+																				.d-order__count 1 шт.
+																			td
+																				.d-order__price
+																					b 6 569,00 
+																						i.rub ₽
+															.order-list__summary
+																.order-summary
+																	.order-summary__summ Товаров на сумму: 6 659,00 
+																		i.rub ₽
+																	.order-summary__deliv Доставка: 0 
+																		i.rub ₽
+																	.order-summary__total
+																		b Итого: 6 937,00 
+																			i.rub ₽
+											.orders-item__btn
+												a.arrow-btn.arrow-btn--back(href="#") Вернуться назад
+		include inc/footer.pug
+		include inc/scripts.pug

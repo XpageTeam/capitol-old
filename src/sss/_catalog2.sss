@@ -1,0 +1,187 @@
+.catalog2
+
+	&__links
+		background: var(--second-color)
+		padding: 40px 44px 45px
+		margin-bottom: 32px
+
+	&__top
+		display: flex
+		margin-left: -31px
+
+		display: none
+
+		&-filter, &-sort
+			margin-left: 31px
+
+		&-filter
+			width: calc((100% - 31px * 3) / 3)
+
+		&-sort
+			width: calc((133.37% - 31px * 2) / 2)
+
+	&__container
+		margin: 34px 0 0
+
+.cat-links
+	column-count: 4
+	column-gap: 2rem
+
+	li
+		position: relative
+
+		&:not(:first-child)
+			margin: 6px 0 0
+
+	&__link
+		font-size: 14px
+		// color: #858a98
+		transition: color .3s ease
+		padding-left: 16px
+		position: relative
+		display: block
+
+		&:hover, &:focus, &.active
+			color: var(--main-color)
+
+		&-img
+			display: block
+
+		&-caption
+			position: absolute * 0 0 0
+			padding: 15px
+			color: #fff
+			display: block
+			background: linear-gradient(to top, #000, rgba(#000, .0001) 100%)
+
+.product-item
+
+	&-title
+		white-space: normal
+
+.cat2
+
+	&.plate
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -31px -31px
+
+		.cat2
+
+			&__item
+				width: calc((100% - 31px * 3) / 3)
+				margin: 0 0 31px 31px
+				display: flex
+				flex-direction: column
+
+		.cat-item
+			flex: 1 1 auto
+			// padding: 18px
+
+			&__img
+				margin-bottom: 10px
+				align-items: center
+
+	&.list
+
+		.cat2
+
+			&__item
+
+				&:not(:first-child)
+					margin: 12px 0 0
+
+		.cat-item
+			display: block
+
+			&:after
+				content: ""
+				display: table
+				clear: both
+
+			&__title
+				max-width: 700px
+
+			&__img
+				float: left
+				margin-right: rem(80)
+				text-align: center
+				width: 185px
+
+				img
+					display: inline-block
+
+			&__label
+				right: auto
+				left: rem(35)
+
+			&__id
+				display: inline-block
+
+			&__to-cart
+				position: absolute 25px rem(53) 38px *
+				display: flex
+				justify-content: space-between
+				flex-direction: column
+				align-items: flex-end
+
+				.counter
+					border-radius: 18px
+					background: #f2f4f8
+
+					input
+						background: inherit
+
+					&__btn
+						size: 40px
+
+			&__price
+
+				&-cont
+					flex-direction: column
+					width: auto
+					align-items: flex-start
+
+				&-bot
+					margin: 10px 0 0
+
+	&__item
+		border: 1px solid var(--border-color)
+
+.counter
+	display: flex
+	align-items: center
+
+	&__btn, input
+		flex: none
+
+	input
+		border: none
+		width: 40px
+		text-align: center
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button
+			-webkit-appearance: none
+			appearance: none
+			margin: 0
+
+	&__btn
+		size: 32px
+		position: relative
+
+		&--plus, &--minus
+
+			&:after
+				content: ''
+				position: absolute calc(50% - 1px) calc(50% - 6px) * *
+				size: 11px 1px
+				background: rgba(0, 0, 0, .23)
+
+		&--plus
+
+			&:before
+				content: ""
+				position: absolute calc(50% - 6px) calc(50% - 1px) * *
+				size: 1px 11px
+				background: rgba(0, 0, 0, .23)

@@ -1,0 +1,1923 @@
+@media screen and (min-width: 660px)
+	.main-cat
+
+		&__submenu
+			display: block !important
+
+@media screen and (min-width: 700px)
+	.ordering__summary
+
+		&--mobile
+			display: none
+
+@media screen and (min-width: 1000px)
+	.head
+
+		&__burger, &__mobile-menu
+			display: none
+
+	.filter__close
+		display: none
+
+	.filter
+		max-height: 100vh
+		overflow-y: auto !important
+		-webkit-overflow-scrolling: touch
+
+		&::-webkit-scrollbar
+			width: 9px
+
+			&-track
+				background: var(--border-color)
+
+			&-thumb
+				border-radius: 6px
+				background: var(--main-color)
+
+	body
+
+		&.js__filter-opened
+
+			.cat2
+
+				&.plate, &.list
+					padding-left: calc(100% / 3 + 12px)
+
+				&.plate
+
+					.cat2
+
+						&__item
+							width: calc((100% - 31px * 2) / 2)
+
+				&.list
+
+					.cat-item
+
+						&__to-cart
+							top: 72px
+
+
+		
+@media screen and (min-width: 1000px), (max-width: 660px)
+	.main-cat__submenu__close
+		display: none !important
+
+@media screen and (max-width: 1530px)
+	.about
+
+		&__timeline
+
+			&:before, &:after
+				top: 50px
+
+@media screen and (max-width: 1400px)
+	.about
+
+		&__timeline
+
+			&:before, &:after
+				width: 7vw
+
+@media screen and (max-width: 1280px)
+	.stock-slider 
+
+		.slick
+
+			&-prev
+				right: calc(100% + 15px)
+
+			&-next
+				left: calc(100% + 15px)
+
+	.main-sliders
+
+		&__cont
+			padding-left: 2rem
+			padding-right: 2rem
+
+	.catalog
+		margin: 0 0 -25px -25px
+
+		&__item
+			margin: 0 0 25px 25px
+			width: calc((100% - 25px * 3) / 3)
+
+			.main-cat-block
+
+				&__item
+
+					&-desc
+						padding: 20px 80px 45px 25px
+
+					&-title
+
+						&:after
+							bottom: 20px
+							left: 25px
+
+	.team-slider
+
+		.slick-arrow
+			display: none	
+
+	.team-slider
+
+		.swiper-pagination
+			bottom: -30px
+
+@media screen and (max-width: 1200px)
+	.about
+
+		&__timeline
+			margin: 4rem 0 0
+
+			&:before, &:after
+				width: 4vw
+
+	.catalog2__links
+		padding: 30px
+
+	.timeline
+
+		&__title
+
+			&-cont
+				margin: 0 0 2rem
+
+	.time-slide
+
+		&__year
+			margin: 1.5rem 0 0
+
+	.history
+
+		&__img
+			margin-right: 2rem
+	
+	.main-catalog
+
+		&__list
+			margin: 20px 0 0
+
+		&__aside
+			width: 300px
+
+		&__right
+			width: calc(100% - 320px)
+
+	.main-cat-block
+		margin: 0 0 -18px -18px
+
+		&__item
+			width: calc((100% - 18px * 2) / 2)
+			margin: 0 0 18px 18px
+
+	.main-cat
+
+		&__link
+			padding: 8px 30px 7px 14px
+
+			&.have-sub
+
+				&:after
+					right: 15px
+
+			&-img
+				margin-right: 14px
+				width: 26px
+
+	.main-slide
+
+		&__desc
+			padding: 20px 40px
+
+	.main-slider
+
+		.swiper-pagination
+			right: 40px
+			bottom: 20px
+
+		&__cont
+			flex: none
+
+	.stock
+
+		&__desc
+			padding: 20px 30px 30px
+
+	.awards
+		margin: 0 0 -3rem -3rem
+
+		&__item
+			width: calc((100% - 3rem * 2) / 2)
+			margin: 0 0 3rem 3rem
+
+	.tovar-main
+
+		&__slider
+			margin-right: 2rem
+
+@media screen and (max-width: 1100px)
+	html
+		font-size: 96%
+
+	.main-catalog
+
+		&__list
+			flex: 1 1 auto
+			display: flex
+			flex-direction: column
+
+	.main-cat-block
+		flex: 1 1 auto
+
+		&__item
+			display: flex
+			flex-direction: column
+
+			&-img
+				display: flex
+				flex-direction: column
+				flex: 1 1 auto
+
+				img
+					flex: 1 1 auto
+					object-fit: cover
+					object-position: right bottom
+
+	// @supports (display: grid)
+	// 	.main-cat-block
+	// 		display: grid
+	// 		grid-gap: 18px
+	// 		grid-template-columns: repeat(2, 1fr)
+	// 		margin: 0 !important
+	// 		align-content: stretch
+
+	// 		&__item
+	// 			width: auto !important
+	// 			margin: 0 !important
+	// 			display: flex
+	// 			flex-direction: column
+
+	// 			&-img
+	// 				flex: 1 1 auto
+	// 				display: flex
+	// 				flex-direction: column
+
+	// 				img
+	// 					flex: 1 1 auto
+
+	.head-cart
+
+		&__link
+			padding: 0
+			font-size: 0
+			size: width("../img/ico-cart.png") height("../img/ico-cart.png")
+
+			&[data-count]
+				margin-right: 12px
+
+	.main-sliders
+
+		&__cont
+			padding: 2.5rem 2rem
+
+		&__title
+
+			&-cont
+				margin-bottom: 1.8rem
+
+	.catalog
+		margin: 0 0 -20px -20px
+
+		&__item
+			width: calc((100% - 20px * 3) / 3)
+			margin: 0 0 20px 20px
+
+			.main-cat-block
+
+				&__item
+
+					&-desc
+
+	.order-list
+
+		&__table
+
+			td
+
+				&:nth-child(2)
+					// width: auto
+					padding-left: 2rem
+
+	.orders-item
+
+		&__head
+			padding: 20px 2rem
+
+	.detail-order
+
+		&__table
+
+			td
+
+				&:first-child
+
+					&:not(:last-child)
+						padding-left: 2rem
+
+			tr
+
+				&:first-child
+
+					td
+						padding-top: 20px
+
+				&.detail-order__table-subtitle
+
+					+ tr
+
+						td
+							padding-top: 20px
+
+					span
+						padding-left: 2rem
+						margin: 20px 0 0
+
+	.order-list
+		padding: 20px 2rem
+
+		&__summary
+			margin-left: 2rem
+
+	.d-order__count
+		white-space: nowrap
+
+	.head-cart__popup:before
+		right: 9px
+
+@media screen and (max-width: 1000px)
+	html
+		font-size: 94%
+	
+
+	.catalog2__links
+		padding: 20px			
+
+	.cat-links
+		column-count: 1
+
+	.wrapper
+		padding: 0 18px
+
+	.burger
+		position: relative
+		size: 30px 20px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		cursor: pointer
+
+		&:after, &:before
+			content: ""
+			transform-origin: left
+			display: inline-block
+
+		&:matches(:after, :before, & span)
+			background: var(--main-color)
+			height: 2px
+
+		span
+			transition: opacity .3s ease
+
+	body
+
+		&.js__filter-opened
+
+			.filter
+				transform: translate3d(100%, 0, 0)
+
+		&.js__menu-opened, &.js__filter-opened
+			overflow: hidden
+			position: fixed 0 0 * 0
+
+	body.js__menu-opened
+
+		.head, .head__mobile-menu, .footer, #content
+			transform: translate3d(-270px, 0, 0) !important
+
+	.head, .head__mobile-menu, .footer, #content
+		transition: transform .3s ease
+
+	.head
+
+		&__nav
+			display: none
+
+		&__wrap
+			padding: 10px 0
+
+		&__mobile-menu
+			position: fixed 0 * 0 100%
+			overflow-y: auto
+			-webkit-overflow-scrolling: touch
+			overflow-scrolling: touch
+			border-left: 1px solid #e7e7e7
+			z-index: 10
+			background: var(--second-color)
+			width: 270px
+
+		&__burger
+
+			&.js__active
+				
+				.burger
+					width: 25px
+
+					span
+						opacity: 0
+
+					&:before
+						transform: rotate(45deg)
+
+					&:after
+						transform: rotate(-45deg)
+
+	.mobile-menu
+		padding: 20px 0
+
+		.ya-site-suggest-popup
+			display: none !important
+
+		&__search
+			padding: 0 15px 20px
+
+			.search-form
+				border: 1px solid #e7e7e7
+
+				&__text
+					padding: 0 15px
+					flex: none
+					width: calc(100% - 46px)
+
+		&__list
+			border-top: 1px solid #e7e7e7
+
+		&__link
+			display: block
+			padding: 15px
+
+		&__item
+			border-bottom: 1px solid #e7e7e7
+
+		&__info
+			padding: 30px 15px
+
+			&-download, &-phone, &-mail, &-address
+
+				&:not(:first-child)
+					margin: 20px 0 0
+
+			.dl-btn
+				width: 100%
+
+		.submenu
+			column-count: 1
+			padding: 0
+			display: none
+			min-width: 0
+
+			&:before
+				display: none
+
+			&__item
+				margin: 0
+
+				&:not(:first-child)
+					border-top: 1px solid var(--border-color)
+
+			&__link
+				padding: 15px 22px
+				display: block
+
+	.head-bot
+
+		&__title
+			display: none
+
+	.main-catalog
+		flex-direction: column
+		padding-bottom: 1px
+
+		&__aside, &__right
+			width: auto
+
+		&__list
+			margin: 0
+
+	.main-cat
+		flex-direction: row
+		flex-wrap: wrap
+
+		&__item
+			width: 50%
+
+			&:nth-child(odd)
+
+				&:not(:last-child)
+					padding-right: 1px
+
+		&__link
+
+			&.have-sub
+
+				&:after
+					transform: rotate(135deg)
+
+	.main-cat-block
+		margin: 0 0 -1px -1px
+
+		&__item
+			width: calc((100% - 1px * 2) / 2)
+			margin: 0 0 1px 1px
+
+	.main-content
+		margin: 0
+
+		> .wrapper
+			padding: 0
+
+	.main-sliders
+
+		&__cont
+			padding: 20px 0 50px
+
+		&__title
+
+			&-cont
+				justify-content: center
+				margin-bottom: 18px
+
+	.stock-slider
+
+		.slick-arrow
+			display: none
+
+		.swiper-pagination
+			bottom: -34px
+
+			&-bullet
+				margin: 0 !important
+				border-radius: 50%
+				position: relative
+				width: 18px
+				height: 18px
+				border-radius: 50%
+				overflow: hidden
+				background: none
+				text-indent: -9999px
+				color: var(--main-color)
+				transition: border-color .3s ease
+				border: 1px solid transparent
+				opacity: 1
+
+				&:before
+					content: ""
+					top: 50%
+					left: 50%
+					position: absolute
+					transform: translate3d(-50%, -50%, 0)
+					width: 11px
+					height: 11px
+					border-radius: inherit
+					background: currentColor
+					transition: transform .3s ease
+
+				&-active
+					border-color: currentColor
+
+	.main-news
+		padding: 20px 0
+		flex-direction: column
+
+		&__title
+
+			&-cont
+				margin-bottom: 10px
+
+		&__big, &__list
+			width: auto
+
+		&__list
+			margin: 18px 0 0
+
+			&-item
+
+				&:not(:first-child)
+					margin: 18px 0 0
+
+	.big-news
+
+		&__img
+
+			img
+				width: 100%
+
+	.main-soc
+
+		&__cont
+			padding: 18px 0 0 !important
+
+	.footer
+		margin: 25px 0 0
+
+		&__top
+			position: sticky
+			bottom: 0
+
+		&__phone, &__mail
+			display: none
+
+	.inner-content
+		margin: 20px 0 0 !important
+
+		&__cont
+			margin: 20px 0 0 !important
+
+	.news
+
+		&-item
+
+			&__img
+				margin-right: 1rem
+
+	.paginator
+		margin: 28px 0 0
+
+	.text-page
+
+		[align="right"]
+			margin: 0 0 20px 20px
+
+		[align="left"]
+			margin: 0 20px 20px 0
+
+		[align="right"], [align="left"]
+			max-width: 50%
+
+		> figure
+
+			figcaption
+				padding: 10px 15px
+				text-align: left
+
+	.history
+		display: block
+
+		&:after
+			contnet: ""
+			display: table
+			clear: both
+
+		&__img
+			float: left
+			max-width: 35%
+			margin: 0 18px 18px 0
+
+		&__text
+
+			.text-page
+				max-width: none
+
+	.about
+
+		&__timeline
+			margin: 30px 0 0
+
+	.timeline
+
+		&__title
+
+			&-cont
+				margin: 0 0 1rem
+
+		&__slider
+			margin-bottom: 2rem
+
+
+	.time-slide__year
+		margin: 1.8rem 0 0
+
+	.stocks, .catalog
+		margin: 0 0 -18px -18px
+
+		&__item
+			width: calc((100% - 18px * 2) / 2)
+			margin: 0 0 18px 18px
+
+	.cart-table
+
+		th
+
+			&:first-child
+				padding-left: 18px
+
+		tbody
+
+			td
+				padding-top: 15px
+				padding-bottom: 15px
+
+				&:not(:last-child)
+					padding-right: 18px
+
+		tfoot
+
+			td
+				padding: 18px
+
+	.cart-item
+
+		&__img
+			display: block
+			width: 110px
+
+	.cart
+
+		&__btns
+			margin: 18px 0 0
+
+	.catalog2
+
+		&__top
+			border: 1px solid var(--border-color)
+			align-items: center
+			justify-content: space-between
+			margin-left: 0
+
+			&-filter, &-sort
+				width: auto
+				margin-left: 0
+
+			.sort
+				border: none
+			
+			&-sort
+				flex: 1 1 auto
+
+	.filter
+		width: 320px
+		position: fixed 0 100% 0 auto
+		overflow-y: auto
+		-webkit-overflow-scrolling: touch
+		overflow-scrolling: touch
+		transition: transform .3s ease
+		display: block !important
+		// padding-right: 10px
+
+		&::-webkit-scrollbar
+			width: 9px
+
+			&-track
+				background: var(--border-color)
+
+			&-thumb
+				border-radius: 7px
+				background: var(--main-color)
+
+		&__close
+			size: 30px
+			position: absolute 0 5px * *
+			background: var(--main-color)
+			border: none
+			display: flex
+			align-items: center
+			justify-content: center
+			padding: 0
+
+			svg
+				size: 100%
+				stroke: #fff
+				stroke-width: 1.5
+
+		&__block
+			padding: 25px 18px
+
+		&__btns
+			position: sticky
+			bottom: 0
+			padding: 25px 18px
+			background: var(--second-color)
+			z-index: 5
+			border-top: 1px solid var(--border-color)
+
+		&-submit
+			padding: 14px 20px
+
+	.cat2
+
+		&.plate
+			margin: 0 0 -18px -18px
+
+			.cat2
+
+				&__item
+					width: calc((100% - 18px * 3) / 3)
+					margin: 0 0 18px 18px
+
+		&.list
+
+			.cat-item
+				padding: 20px 18px
+
+				&__img
+					width: 100px
+					margin-right: 20px
+					display: block
+
+	.awards
+		margin: 0
+
+		&__item
+			margin: 0
+			padding: 20px 0
+			width: 100%
+
+			&:last-child
+				padding-bottom: 0
+
+			&:not(:first-child)
+				border-top: 1px solid var(--border-color)
+
+	.award
+
+		&__img
+			margin-right: 18px
+
+	.boss
+		display: block
+
+		&:after
+			content: ""
+			display: table
+			clear: both
+
+		&__img
+			float: left
+			max-width: 30%
+			margin: 0 20px 20px 0
+
+		&__desc
+			display: block
+
+	.team
+
+		&__list
+
+			&:not(:first-child)
+				margin: 3rem 0 0
+
+	.delivery
+
+		&__right
+			width: 290px
+			margin-left: 18px
+
+	.delivery-banner
+		top: 18px
+		padding: 1.6875rem 3.6875rem 8rem 1.3125rem
+
+	.address-list
+
+		&__item
+			width: 50%
+
+			&:nth-child(odd)
+				padding-right: 18px
+
+			&:nth-child(even)
+				padding-left: 18px
+
+	.tovar-main
+
+		&__slider
+			width: 200px
+
+	.tovar-sliders
+
+		&__small
+			display: none
+
+	.tovar-desc, .tovar-main, .tovar-sliders
+		display: block
+
+	.tovar-main
+
+		&:after
+			contentL: ""
+			display: table
+			clear: both
+
+		&__slider, &__desc
+			display: block
+
+		&__slider
+			float: left
+		
+	.tovar__title
+		min-height: 44px
+
+	.tovar-slider
+
+		.slick-arrow
+			z-index: 4
+			display: none
+
+	.tovar-buy
+		padding: 30px 20px
+
+	.tovar-desc
+
+		&__price
+			min-height: 64px
+
+			.cat-item__price-bot
+
+				&:before
+					position: static
+					display: inline-block
+					flex: none
+					margin-right: 10px
+
+	.ordering
+		padding-bottom: 80px
+		position: relative
+
+		&__summary
+			margin-left: 18px
+			width: 300px
+
+	.od
+
+		&__title
+
+			&-cont
+				padding: 18px 50px 20px 30px
+
+				&:after
+					right: 21px
+
+	.order-data
+
+		&__item
+
+			&:not(:first-child)
+				margin: 25px 0 0
+
+		&__btns
+			position: absolute * 0 0 0
+
+	.od-person
+
+		&__notice
+			padding-top: 0
+
+		&__form
+			grid-template-columns: 100%
+
+			.forms
+
+				&__input
+
+					&--textarea
+						min-height: 150px
+
+					&-cont
+
+						&--textarea
+							grid-row: 4
+							grid-column: 1
+
+	.o-summary
+
+		&__item
+			padding: 18px
+
+	.detail-order
+
+		&__table
+
+			td
+
+				&:first-child
+
+					&:not(:last-child)
+						padding-left: 18px
+
+			tr
+
+				&.detail-order__table-subtitle
+
+					span
+						padding-left: 18px
+						margin: 20px 0 0
+
+	.order-list
+		padding: 20px 18px
+		flex-direction: column
+
+		&__summary
+			margin: 30px 0 0
+
+	.main-cat
+		position: relative
+
+		&__item
+			position: static
+
+			&:nth-child(odd)
+
+				.main-cat__submenu
+					left: calc(50% - 1px)
+					border-left: 1px solid #fff
+
+			&:nth-child(even)
+
+				.main-cat__submenu
+					left: 0
+					border-right: 1px solid #fff
+
+		&__submenu
+			background: var(--second-color)
+			width: calc(50% + 1px)
+			min-width: 0
+			top: 0 !important
+			bottom: 1px !important
+			overflow-y: auto
+			-webkit-overflow-scrolling: touch
+			overflow-scrolling: touch
+
+			&__close
+				display: block
+				position: absolute 0 0 * *
+				size: 25px
+				background: var(--main-color) !important
+
+			li
+				padding: 0 !important
+
+			&-link
+				display: block
+				padding: 13px 18px
+
+@media screen and (max-width: 800px)
+	.delivery
+		flex-direction: column
+
+		&__right
+			width: auto
+			margin: 30px 0 0
+
+	.delivery-banner
+		padding: 1.6875rem 3.6875rem 3rem 1.3125rem
+
+	.lc__content
+
+		.forms
+
+			&-wrap
+				margin-left: -18px
+
+			&__input-cont
+				margin-left: 18px
+				width: calc((100% - 18px * 2) / 2)
+
+	.orders-item
+
+		&__head, &__desc-title
+			padding: 18px
+
+	.orders-desc
+		padding: 18px
+
+	.orders__item
+
+		&:not(:first-child)
+			margin: 20px 0 0
+
+	.head-cart__popup
+		display: none
+
+@media screen and (max-width: 700px) and (orientation: landscape)
+	.cat2
+
+		&.plate
+			margin: 0 0 -18px -18px
+
+			.cat2
+
+				&__item
+					width: calc((100% - 18px * 2) / 2)
+
+@media screen and (max-width: 700px)
+	.head-bot
+
+		&__phone
+			display: none
+
+	.filter__cont, .catalog2__top-filter, .filter__btn
+		align-self: stretch
+		display: flex
+		flex-direction: column
+
+	.filter
+
+		&__cont, &__btn
+			flex: 1 1 auto
+
+	.filter-btn
+		flex: 1 1 auto
+
+	.sort
+		padding: 18px 13px 18px 0
+
+		&__view
+			margin-left: 10px
+
+
+		&__select
+			padding: 0 18px 0 5px
+			margin-left: 0
+
+	.filter-btn
+		overflow: hidden
+		text-indent: -9999px
+		background: url("../img/ico-filter.svg") center no-repeat
+		background-size: 50%
+		padding: 0
+		size: 50px auto
+
+		&:after
+			display: none
+
+	.ordering
+		flex-direction: column
+		padding-bottom: 0
+
+		&__summary
+			margin-left: 0
+			width: 100%
+
+		&__summary, &__data
+
+			&:not(:first-child)
+				margin: 20px 0 0
+
+	.order-data
+	
+		&__btns
+			flex-direction: column
+			position: static !important
+
+			.arrow-btn
+
+				&:not(:last-child)
+					margin: 0 0 10px
+
+	.o-summary
+
+		&__title-cont, &__item, &__footer
+			padding: 16px
+
+	.od
+
+		&__title
+
+			&-cont
+				padding: 16px 30px 18px 16px
+
+				&:after
+					right: 12px
+
+	.od-deliv
+
+		&__methods
+
+			&-item
+				margin-bottom: 10px
+
+		&__inputs
+			margin-left: 0 !important
+
+			.forms__input-cont
+				width: 100%
+				margin-left: 0
+
+@media screen and (max-width: 660px) and (orientation: portrait)
+	.award
+		flex-direction: column
+
+		&__img
+			margin: 0 0 16px
+			width: 100%
+			text-align: center
+
+			img
+				display: inline-block
+
+@media screen and (max-width: 660px)
+	.wrapper
+		padding: 0 16px
+
+	.delivery__text 
+
+		ul 
+
+			li
+
+				&:before
+					margin-right: 10px
+					margin-left: 0
+
+	.main-soc
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		&__column
+			float: none !important
+			padding-right: 0 !important
+			width: 100%
+
+			&:not(:first-child)
+				margin: 20px 0 0
+
+			.fb_iframe_widget span, #vk_groups
+				width: 100% !important
+
+				iframe
+					width: 100% !important
+
+	.sort
+		flex-wrap: wrap
+		align-items: flex-start
+		padding: 16px
+
+		&__select
+
+			&-cont
+				width: 100%
+				margin: 7px 0 0
+
+		&__view
+			order: -1
+			margin-left: auto
+			margin-bottom: 10px
+
+		&:before
+			content: ""
+			display: inline-block
+			width: 50% !important
+			order: -2
+
+	.filter-btn
+		width: 40px
+
+	.filter
+
+		&__btn
+			align-self: flex-start
+			flex: none
+			position: absolute 13px * * 8px
+
+		&__cont
+			padding-top: 20px
+
+	.main-cat
+
+		&__submenu
+			display: none
+			position: static
+			width: 100%
+			border: none !important
+			border-top: 1px solid var(--border-color) !important
+			opacity: 1
+			pointer-events: all
+
+	.detail-order
+
+		&__table
+
+			td
+
+				&:first-child
+
+					&:not(:last-child)
+						padding-left: 16px
+						width: 100px
+
+			tr
+
+				&.detail-order__table-subtitle
+
+					span
+						padding-left: 16px
+
+	.order-list
+		padding: 20px 16px
+		flex-direction: column
+
+		&__summary
+			margin: 25px 0 0
+
+	.filter
+		width: 100%
+
+	.lc-password
+		max-width: none
+
+	.orders-item
+
+		&__head, &__desc-title
+			padding: 16px
+
+		&__head
+			flex-wrap: wrap
+			justify-content: space-between
+
+		&__date
+			margin: 0 !important
+
+		&__more
+			margin: 10px 0 0 
+			width: 100%
+
+	.order-list
+
+		&__table, tbody, td
+			display: block
+
+		tr
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+
+			&:not(:last-child)
+				padding-bottom: 15px
+
+			&:not(:first-child)
+				padding-top: 15px
+				border-top: 1px solid var(--border-color)
+
+		td
+
+			&:nth-child(2)
+				width: calc(100% - 88px)
+
+	.orders-desc
+		padding: 16px
+		flex-direction: column
+
+		&__right
+			flex-direction: row
+			flex-wrap: wrap
+			justify-content: space-between
+			align-items: center
+			margin: 20px 0 0
+
+		&__btn
+			width: 100%
+
+			.default-btn
+				display: block
+				text-align: center
+
+	.lc__content
+
+		.forms
+
+			&-wrap
+				margin-left: 0
+
+			&__input-cont
+				margin-left: 0
+				width: 100%
+
+	.lc
+
+		&__btns
+			flex-direction: column-reverse
+			text-align: center
+
+			&-main
+
+				.gray-btn
+					display: block
+
+					&:not(:first-child)
+						margin: 1px 0 0
+
+			&-exit
+				margin-bottom: 20px
+
+				.bordered-btn
+					width: 100%
+
+	.tovar-main
+		display: flex
+		flex-direction: column
+
+		&:after
+			display: none
+
+		&__slider
+			margin: 0 0 30px
+
+		&__slider, &__desc
+			width: 100%
+
+	.tovar-desc
+
+		&__top
+			flex-direction: column
+
+			&-title
+				margin-bottom: 20px
+
+		.cat-item__price-bot
+			padding-left: 0
+
+	.tovar-counters
+		flex-direction: column
+
+		&__item
+			margin-right: 0 !important
+			width: 100%
+
+			&:not(:first-child)
+				margin: 30px 0 0
+
+	.tovar__title
+		display: none
+
+	.tovar-buy
+
+		&__bot
+			justify-content: space-between
+
+	.tovar-buy__total:not(:last-child)
+		margin-right: .5rem
+
+	.tovar
+
+		&__tabs
+			margin: 2rem 0 0
+
+	.tabs-tab
+		padding: 14px 15px 16px		
+
+	ul
+
+		&[data-columns]
+			column-count: 1 !important
+
+	.address-list
+
+		&__item
+			width: 100% !important
+			padding-left: 0 !important
+			padding-right: 0 !important
+			border-right: none !important
+
+			&:not(:first-child)
+				border-top: 1px solid var(--border-color)
+
+	.team-slider .swiper-pagination
+		bottom: -10px
+
+	.deps
+		margin: 0 0 -16px -16px
+
+		&__item
+			margin: 0 0 16px 16px
+			width: calc((100% - 16px * 2) / 2)
+			border: none !important
+
+			&:nth-child(even)
+				border-left: 1px solid var(--border-color) !important
+
+	.cat2
+
+		&.plate
+			margin: 0 0 -18px
+
+			.cat2
+
+				&__item
+					width: 100%
+					margin-left: 0
+
+	.cat2
+
+		&.list
+
+			.cat-item
+
+				&__to-cart
+					position: static
+
+					.counter
+						margin-right: 5px
+
+				&__id
+					margin-bottom: 18px
+
+				&__img
+					width: 55px
+					margin-right: 10px
+
+				&__label
+					left: -10px
+					top: -10px
+
+	.bread-crumbs
+
+		&__this, &__link:not(:nth-last-child(2))
+			display: none
+
+		&__link
+			position: relative
+			display: flex
+			align-items: center
+			color: var(--main-color)
+
+			&:nth-last-child(2)
+				margin-right: 0
+
+				&:after
+					display: none					
+
+			&:before
+				content: "" !important
+				display: inline-block !important
+				size: 10px
+				border-top: 1px solid currentColor
+				border-right: 1px solid currentColor
+				transform: rotate(-135deg)
+				margin-right: 5px
+
+	.promokod
+
+		form
+			flex-direction: column-reverse
+			align-items: flex-start
+
+		&__input, &__label
+			width: 100%
+
+		&__label
+			margin-bottom: 10px
+
+	.cart-itog
+		text-align: left
+
+	.cart__btns
+		flex-direction: column
+
+		.arrow-btn
+			margin-right: 0 !important
+
+			&:not(:first-child)
+				margin: 18px 0 0
+
+	.cart-table
+		display: flex
+		flex-direction: column
+
+		tfoot
+			order: 1
+			margin: 30px 0 0
+
+			tr
+				flex-direction: column
+
+			td
+
+				&:last-child
+					padding-top: 0
+
+		tbody, tfoot, td
+			display: block
+
+		thead
+			display: none
+
+		tr
+			display: flex
+			flex-wrap: wrap
+			position: relative
+
+			&:not(:first-child)
+				padding: 60px 0 0
+
+			&:before
+				// content: ""
+				position: absolute 0 0 * 0
+				height: 30px
+				background: var(--second-color)
+
+			&:first-child
+
+				.cart-table__remove
+					top: 0
+
+		tbody
+
+			tr:last-child
+
+				td
+					border-bottom: 1px solid var(--border-color)
+
+		&__remove
+			position: absolute 50px 0 * *
+			padding: 0 !important
+			border: none !important
+
+			.remove
+				text-indent: 0
+				overflow: visible
+				color: var(--main-color)
+				background: none
+				size: auto
+
+		&__img
+			width: 35%
+			padding-top: 0 !important
+
+		&__name
+			width: 65%
+			padding-right: 0 !important
+			padding-top: 30px !important
+			max-width: none
+
+		&__price, &__count, &__total
+			width: 100%
+			padding-right: 0 !important
+
+		td
+
+			&[data-label]
+				display: flex
+				align-items: center
+
+				&:before
+					content: attr(data-label)
+					display: inline-block
+					padding-right: 16px
+					width: 38%
+
+	.cart-item
+
+		&__img
+			width: auto
+
+	.stocks, .catalog
+		margin: 0
+
+		&__item
+			width: 100%
+			margin: 0
+
+			&:not(:first-child)
+				margin: 16px 0 0
+
+	.catalog
+
+		&__item
+
+			.main-cat-block
+
+				&__item
+
+					&-desc
+						padding: 20px 50px 20px 25px
+
+	.history
+
+		&:after
+			display: none
+
+		&__img
+			float: none
+			width: 100%
+			max-width: none
+
+			img
+				width: 100%
+
+	.timeline
+		
+		&__title
+
+			&-cont
+
+		&__arrows
+			display: none
+
+	.time-slide
+
+		&__text
+			padding: 20px 18px
+
+	.head
+		display: flex
+
+		> .wrapper
+			flex: 1 1 auto
+			padding-left: 0
+
+		&__bot
+			order: -1
+			background: none
+			color: #000
+			display: flex
+			align-items: center
+
+		&__download
+			display: none
+
+		&__lc
+			order: -1
+
+		&__burger
+			margin-left: 51px
+
+	.head-cart
+
+		&__link
+			background: url("../img/ico-cart-blue.svg") no-repeat
+
+			&:before
+				color: #fff !important
+				background: var(--main-color) !important
+
+	.head-lc
+
+		&__link
+			margin-left: 0
+			display: block
+			overflow: hidden
+			text-indent: -9999px
+			size: width("../img/ico-lc.png") height("../img/ico-lc.png")
+			background: url("../img/ico-lc.svg") no-repeat
+
+			&:before
+				display: none
+		
+
+
+	.logo
+
+		img, svg
+			display: block
+
+	.head-bot
+
+		&__search
+			display: none
+
+	.main-cat
+		flex-direction: column
+
+		&__item
+			width: 100%
+
+	.main-slider__cont
+		display: none
+
+	.main-cat-block
+		margin: 1px 0 0
+		flex-direction: column
+
+		&__item
+			width: auto
+
+			&-desc
+				padding: 15px 100px 15px 15px
+
+			&-title
+
+				&:after
+					bottom: 15px
+					left: 15px
+					display: none
+
+	.big-news__desc, .small-news
+		padding: 18px 40px 18px 18px
+
+		&:after
+			right: 20px
+
+	.big-news
+
+		&__img
+
+			&-date
+				left: 18px
+				top: 18px
+
+		&__title
+			font-size: 14px
+
+	.main-sliders
+
+		&__switcher
+			margin: 0 5px
+
+	.footer
+
+		&__top, &__address
+			display: none
+
+		&__bot
+			justify-content: center
+			padding: 15px 0
+
+	.news-item
+		flex-direction: column
+		align-items: stretch
+
+		&__img
+			margin-right: 0
+			margin-bottom: 1rem
+
+			img
+				width: 100%
+
+	.text-page
+
+		[align="right"], [align="left"]
+			margin: 0 0 20px 0
+			max-width: none
+			float: none
+
+	.popup-form
+		max-width: 100% !important
+
+	.doc-panel__header
+		flex-direction: column
+
+		.btn
+
+			&-panel
+				margin: 0 !important
+				border-bottom: 1px solid var(--border-color)
+
+				&.active
+					order: 1
+					border-bottom:  none !important
+
+	.formoneclick
+
+		.forms
+
+			&-wrap
+				margin: 0
+
+			&__input-cont
+				width: 100% !important
+				margin: 0
+
+				&:not(:first-child)
+					margin: 15px 0 0
+
+			&-submit
+
+				&-cont
+					width: 100%
+
+					.btn-form
+						width: 100%
+
+@media screen and (max-width: 400px)
+	.deps
+
+		&__item
+			width: 100%
+			padding-bottom: 20px
+			align-items: flex-start
+			border: none !important
+			border-bottom: 1px solid var(--border-color) !important
+
+			&:nth-child(even)
+				border-left: none !important
+
+	.dep
+
+		&__title
+			margin-bottom: 12px
+
+@media screen and (max-width: 360px)
+	.delivery-banner
+		background: var(--main-color)

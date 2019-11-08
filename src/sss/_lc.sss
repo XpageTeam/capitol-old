@@ -1,0 +1,528 @@
+.lc
+
+	&__btns
+		display: flex
+		justify-content: space-between
+
+		&-main
+
+			.gray-btn
+
+				&:not(:last-child)
+					margin-right: 1px
+
+	&__content
+		margin: rem(47) 0 0
+
+		.forms
+
+			&-wrap
+				margin: 0 0 -17px -30px
+
+				&--column
+
+					.forms
+
+						&__input
+
+							&-cont
+
+								&:not(:first-child)
+									margin: 30px 0 0
+
+.lc-data
+
+	&__row
+
+		&:not(:first-child)
+			margin: rem(22) 0 0
+
+	&__btn
+		margin: rem(33) 0 0
+
+.lc-edit
+	max-width: 936px
+
+	&__submit
+		margin: 33px 0 0
+
+	.forms
+
+		&__input
+
+			&-cont
+				width: calc((100% - 30px * 3) / 3)
+				margin: 0 0 17px 30px
+
+.lc-password
+	max-width: 292px
+
+.lc-orders
+
+	&__menu
+		margin-bottom: rem(41)
+
+.orders-menu
+	display: flex
+
+	&__item
+
+		&:not(:last-child)
+			margin-right: rem(39)
+			position: relative
+
+			&:after
+				content: ""
+				size: 1px 19px
+				background: #e4e8ea
+				position: absolute * * 1px calc(100% + 20px)
+
+	&__link
+		transition: color .3s ease
+
+		&:hover, &:focus, &.active
+			color: var(--main-color)
+
+.orders
+
+	&__item
+
+		&:not(:first-child)
+			margin: rem(36) 0 0
+
+.orders-item
+
+	&__body
+		border: 1px solid var(--border-color)
+		border-top: none
+
+	&__head
+		background: var(--second-color)
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: rem(23) rem(42)
+
+	&__date
+		margin-right: auto
+
+	&__date, &__desc-title
+		color: #adb4c6
+
+	&__title
+		font-weight: bold
+		font-size: rem(16)
+		margin-right: 34px
+
+	&__desc
+
+		&-title
+			padding: rem(22) rem(42)
+			border-bottom: 1px solid var(--border-color)
+
+.orders-desc
+	padding: rem(38) rem(42)
+	display: flex
+	justify-content: space-between
+
+	&__left, &__right
+		display: flex
+		flex-direction: column
+
+	&__btn
+		padding: 20px 0 0
+		margin: auto 0 0
+
+	&__right
+
+		.orders-item__date 
+			margin: 0 0 15px 24px
+
+	&__left
+
+		> ul
+
+			&:first-child
+				line-height: lh(28, 14)
+
+	&__list
+
+		&-title
+			font-weight: bold
+			font-size: 1rem
+			margin-bottom: 14px
+
+			&:not(:first-child)
+				margin: 2rem 0 14px
+
+		li
+
+			&:not(:first-child)
+				margin: 13px 0 0
+
+		&:not(.js__opened)
+
+			li
+
+				&:nth-child(n + 3)
+					display: none
+
+		&.js__opened
+
+			~ .orders-desc__list-toggle
+
+				&:before
+					transform: rotateZ(180deg)
+
+		&-toggle
+			margin: 2rem 0 0
+			color: var(--main-color)
+			position: relative
+			padding-left: 23px
+			white-space: nowrap
+
+			&:before
+				content: ""
+				transition: transform .3s ease
+				position: absolute calc(50% - height("../img/ico-orders-toggle.png") / 2) * * 0
+				background: url("../img/ico-orders-toggle.svg") no-repeat
+				size: width("../img/ico-orders-toggle.png") height("../img/ico-orders-toggle.png")
+
+			span
+				border-bottom: 1px solid #d4e3f6
+
+.status
+	font-weight: bold
+	padding-left: 31px
+	position: relative
+	margin-left: 24px
+
+	&:before
+		content: ''
+		border-radius: 50%
+		size: 18px
+		position: absolute calc(50% - 9px) * * 0
+
+	&--received
+		background: url("../img/ico-received.png") no-repeat
+
+	&--canceled
+		background: url("../img/ico-canceled.png") no-repeat
+
+	&--done
+		background: url("../img/ico-done.png") no-repeat
+
+.detail-order
+
+	&__table
+		width: 100%
+		border-bottom: 1px solid var(--border-color)
+
+		tr
+
+			&:first-child, &.detail-order__table-subtitle + tr
+
+				td
+					padding-top: 27px
+
+			&.detail-order__table-subtitle
+
+				td
+					padding-top: 0
+
+				span
+					display: block
+					margin: 25px 0 0
+					padding: rem(17) rem(42)
+					color: #adb4c6
+					border-top: 1px solid var(--border-color)
+
+				&:not(:last-child)
+
+					span
+						border-bottom: 1px solid var(--border-color)
+
+		td
+			padding-top: 11px
+
+			&:first-child
+				width: 255px
+
+				&:not(:last-child)
+					padding-left: rem(42)
+
+			&:not(:first-child)
+				padding-left: 10px
+
+.order-list
+	display: flex
+	padding: rem(39) rem(44) rem(44)
+
+	&__table
+		flex: 1 1 auto
+
+		td
+			vertical-align: middle
+			padding-top: 7px
+			padding-bottom: 7px
+
+			&:first-child
+				width: 88px
+
+			&:nth-child(2)
+				padding-left: rem(70)
+				width: 270px
+
+			&:last-child
+				width: 82px
+
+	&__summary
+		flex: none
+		margin-left: rem(96)
+
+.order-summary
+	background: var(--second-color)
+	padding: rem(35) rem(28) rem(42)
+	position: sticky
+	top: 20px
+
+	&__summ, &__deliv
+
+		&:not(:first-child)
+			margin: rem(8) 0 0
+
+	&__total
+		margin: rem(30) 0 0
+		font-size: rem(17)
+		line-height: lh(30, 17)
+
+.d-order
+
+	&__img
+
+		img
+			display: block
+
+	&__title
+		display: block
+		// max-width: 210px
+
+	&__count
+		text-align: center
+
+	&__price
+		text-align: right
+		white-space: nowrap
+
+.orders-item
+
+	&__btn
+		margin: rem(37) 0 0
+
+.doc-panel
+	max-width: 100% !important
+
+	&__header
+		display: flex
+		justify-content: space-between
+
+	.btn-panel
+		text-decoration: none
+		cursor: pointer
+		background-color: #ecf0f2
+		padding: 20px 0
+		text-align: center
+		color: #000
+		flex: 1 1 auto
+
+		&:not(:last-child)
+			margin-right: 15px
+
+		&.active
+			background-color: var(--main-color)
+			color: #fff
+
+	&__info:not(:last-child)
+		margin-bottom: 40px
+
+	&__text 
+
+		&-img
+			width: persent(270)
+
+		&.active
+			display: block
+
+	&__text-list
+
+	&__text-item
+		display: flex
+		border-bottom: 1px solid #ecf0f2
+		padding: 45px 0
+
+
+	&__info-dop
+		display: flex
+
+	&__info-discription
+		display: flex
+		flex-direction: column
+		margin-left: 45px
+		align-self: center
+
+		a
+			display: flex
+			flex-direction: column
+			text-decoration: none
+
+.formoneclick
+	max-width: 1060px
+
+	.forms-text-cont
+		text-align: left
+		margin-bottom: 30px
+		justify-content: flex-start
+
+	input:read-only 
+		background: #ecf0f2
+
+	.forms
+
+		&-checkbox-wrap
+			display: flex 
+			flex-direction: column
+			justify-content: center
+
+		&__title
+			text-transform: none
+			display: none
+
+		&-wrap 
+			display: flex
+			margin: 0 0 -17px -30px
+
+		&__input-wrap
+			flex-wrap: wrap
+
+		&__radio
+
+			&-wrap
+				display: flex
+				justify-content: flex-start
+				margin-bottom: 20px
+
+			&-cont
+
+				&:not(:last-child)
+					margin-right: 60px
+		&__input
+			height: 57px
+
+			&-wrap
+				display: flex
+
+			&--file-support
+				width: 75%
+				font-size: rem(14)
+				line-height: rem(18)
+				margin-top: vh(5)
+
+			&-cont
+				width: calc((100% - 30px * 3) / 3)
+				margin: 0 0 17px 30px
+
+		&__file-formats
+			order: 1
+
+			a 
+				text-decoration: none
+		&-input
+			&-cont
+				flex-direction: column-reverse
+				width: 25%
+
+				&:not(:last-child)
+					margin-right: 35px
+
+				&--file 
+					width: 100%!important
+					justify-content: flex-end
+
+					.forms__label--file
+
+						&:before
+							top: 17px
+
+					&:first-child
+
+						.forms__label--file
+
+							&:before
+								top: 35px
+				&--files
+					flex-direction: column
+					width: 53%
+
+			&__textarea
+				width: 280px
+				max-width: 265px
+				height: 155px
+				max-height: 155px
+				margin-top: 15px
+				padding: 10px
+
+				&-cont 
+					margin-right: 50px
+
+		&__textarea-cont
+			position: relative
+
+			.forms__error-message
+				top: 0
+				bottom: initial
+				right: 35px
+
+			.forms__error-message-icon
+				top: 50px
+				
+
+		&__textarea-wrap
+			display: flex
+			margin-bottom: 17px
+
+		
+		&__recaptcha
+			margin-right: 65px
+
+			&-wrap
+				display: flex
+				flex-direction: flex-start
+
+		&__submit
+			display: flex
+			justify-content: flex-start
+			border: 0
+			padding: 0
+
+		&__label
+
+			&--file:before
+				background: #f4f4f4
+				right: 0
+				cursor: pointer
+				height: 57px
+				width: 20%
+				text-align: center
+				line-height: 57px
+				box-sizing: border-box
+
+		&__textarea-cont
+			display: flex
+			flex-direction: column-reverse
+			justify-content: flex-end
+	.forms-submit-cont 
+		margin-top: vh(35)
+
+.forms-textarea-cont
+	display: flex
+	flex-direction: column-reverse

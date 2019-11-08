@@ -1,0 +1,168 @@
+.head
+
+	&__wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 18px 0 9px
+
+	&__bot
+		background: var(--main-color)
+		color: #fff
+
+		.wrapper
+			position: relative
+
+	&__lc
+		display: none
+
+.head-lc
+
+	&__link
+		position: relative
+		margin-left: 32px
+
+		&:before
+			content: ""
+			position: absolute calc(50% - height("../img/ico-lc.png") / 2) calc(100% + 17px) * *
+			pointer-events: none
+			background: url("../img/ico-lc.svg") no-repeat
+			size: 16px height("../img/ico-lc.png")
+
+.submenu
+	background: var(--second-color)
+	position: relative
+	box-shadow: var(--box-shadow)
+	padding: rem(30) rem(50)
+	column-count: 2
+	column-gap: rem(90)
+	min-width: 760px
+
+	&:before
+		content: ""
+		position: absolute * * 100% 70px
+		size: 0
+		border-style: solid
+		border-width: 0 10px 10px 10px
+		border-color: transparent transparent var(--second-color) transparent
+
+	&__item
+		break-inside: avoid
+
+		&:not(:first-child)
+			margin: rem(26) 0 0
+
+	&__link
+		transition: color .3s ease
+
+		&:matches(:hover, .active)
+			color: var(--main-color)
+
+.head-menu
+	display: flex
+
+	&__submenu
+		position: absolute 100% * * rem(-50)
+		padding-top: 32px
+		z-index: 10
+		transition: opacity .3s ease
+		opacity: 0
+		pointer-events: none
+
+		&.js__visible
+			opacity: 1
+			pointer-events: all
+
+	&__item
+		position: relative
+
+		&:not(:last-child)
+			margin-right: vw(65)
+
+	&__link
+		transition: color .3s ease
+
+		&:matches(:hover, :focus, .active)
+			color: var(--main-color)
+
+		&.have-sub
+			position: relative
+
+			&:after
+				content: ''
+				position: absolute * * 6px calc(100% + 13px)
+				border: 1px solid #000
+				border-top: none
+				border-left: none
+				size: 6px
+				transform: rotate(45deg)
+
+.head-bot
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 19px 0
+
+	&__search
+		width: 480px
+
+.head-phone
+
+	a
+		color: #fff
+		font-weight: bold
+		border-bottom: none
+		font-size: 16px
+
+.head-cart
+
+	&__link
+		display: block
+		background: url("../img/ico-cart.svg") no-repeat
+		min-height: height("../img/ico-cart.png")
+		padding-left: 48px
+		color: inherit !important
+
+		&[data-count]
+			position: relative
+
+			&:before
+				content: attr(data-count)
+				position: absolute
+				border-radius: 50%
+				background: #fff
+				color: #000
+				font-size: 10px
+				size: 21px
+				line-height: 21px
+				text-align: center
+				left: 13px
+				bottom: calc(100% - 11px)
+
+.search-form
+
+	form
+		display: flex
+
+	&__text
+		border: none
+		padding: 5px 20px 5px 29px
+		flex: 1 1 auto
+
+	&__submit
+		flex: none
+		overflow: hidden
+		text-indent: -9999px
+		display: block
+		border: none
+		size: 46px
+		background: url("../img/ico-search.png") center no-repeat
+		background-color: var(--second-color) !important
+
+
+@media screen and (max-width: 660px)
+	div.head
+		background: var(--second-color)
+
+		&__bot
+			background: none !important

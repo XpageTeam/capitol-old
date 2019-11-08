@@ -1,0 +1,88 @@
+.cart-table
+	width: 100%
+
+	th
+		text-align: left
+		padding: 20px 0 22px
+
+		&:first-child
+			padding-left: 65px
+
+	td
+		vertical-align: middle
+
+	&__remove
+		text-align: right
+
+	&__img
+		text-align: center
+
+	&__name
+		max-width: 290px
+
+	thead, tfoot
+		background: var(--second-color)
+
+	tfoot
+
+		td
+			padding: 19px 42px 18px
+
+			&:last-child
+				text-align: right
+
+	tbody
+
+		td
+			padding: 20px 0
+
+		tr
+
+			&:not(:last-child)
+
+				td
+					border-bottom: 1px solid var(--border-color)
+
+.cart-item
+
+	&__name
+		max-width: 290px
+		display: block
+
+.promokod
+
+	form
+		display: flex
+		align-items: center
+		flex-direction: row-reverse
+		justify-content: flex-end
+
+	&__input, &__label
+		flex: none
+
+	&__label
+		margin-right: 27px
+
+	&__input
+		border: none
+		background: #fff
+		padding: 3px 10px
+		size: 112px 43px
+
+.cart-itog
+	font-weight: bold
+	font-size: rem(20)
+	line-height: lh(35, 20)
+	white-space: nowrap
+
+.cart__btns
+	display: flex
+	justify-content: flex-end
+	margin: 42px 0 0
+
+	a
+		display: flex
+		align-items: center
+
+		&:not(:last-child)
+			margin-right: 19px

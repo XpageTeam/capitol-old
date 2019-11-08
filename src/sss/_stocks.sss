@@ -1,0 +1,50 @@
+.stocks
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 -30px -30px
+
+	&__item
+		width: calc((100% - 30px * 3) / 3)
+		margin: 0 0 30px 30px
+		display: flex
+
+.stock
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+	border: 1px solid var(--border-color)
+
+	&__img
+		overflow: hidden
+
+		&:hover, &:focus
+
+			img
+				transform: scale3d(1.2, 1.2, 1.2)
+
+		img
+			display: block
+			transition: transform .3s ease
+
+	&__desc
+		padding: 27px 40px 35px
+		display: flex
+		flex-direction: column
+		flex: 1 1 auto
+
+	&__title
+		font-size: rem(16)
+		line-height: lh(22, 16)
+		margin-bottom: 15px
+
+	&__text
+		color: #adb4c6
+
+		&:not(:last-child)
+			margin-bottom: 17px
+
+	&__time
+		align-self: flex-start
+		color: #fff var(--main-color)
+		margin: auto 0 0
+		padding: 8px 14px 9px

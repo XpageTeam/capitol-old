@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Корзина
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		
+		main#content
+			.inner-content__cont
+				.wrapper
+					.title-block
+						.title-block__crumbs
+							ul.bread-crumbs
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Главная" itemprop="url")
+										span(itemprop="title") Главная
+								li.bread-crumbs__this Корзина
+						.title-block__title
+							h1 Корзина
+					.inner-content
+						.cart
+							.cart__table
+								table.cart-table
+									tfoot
+										tr
+											td(colspan="3")
+												.promokod
+													form(action="#")
+														input.promokod__input(type="text")
+														label.promokod__label Введите промокод
+											td(colspan="3")
+												.cart-itog Итого: 151,00 
+													i.rub ₽
+									thead
+										tr
+											th(colspan="2") Наименование
+											th Цена / шт.
+											th Количество
+											th(colspan="2") Стоимость
+									tbody
+										each item, i in ["МП Калибратор с ножами для снятия фаски 16-20-25", "ППР малошум Крест 90 110x110x50 Левый 2 плоскости", "РЕХ инструмент запресовщик + расширитель Dn16-20 (DL1225)"]
+											tr
+												td.cart-table__img
+													.cart-item
+														a.cart-item__img(href="#")
+															img(src="img/photos/stock-img-"+i+".jpg" alt=item)
+												td.cart-table__name
+													.cart-item
+														a.cart-item__name(href="#")=item
+												td.cart-table__price(data-label="Цена / шт.")
+													.cart-item
+														.cart-item__price
+															.cat-item__price 151,00 
+																i.rub ₽
+															.cat-item__price-bot 110,00 
+																i.rub ₽
+												td.cart-table__count(data-label="Количество")
+													.cart-item
+														.cart-item__counter
+															include inc/counter.pug
+												td.cart-table__total(data-label="Стоимость")
+													.cart-item
+														.cart-item__total
+															.cat-item__price 151,00 
+																i.rub ₽
+												td.cart-table__remove
+													.cart-item
+														.cart-item__remove
+															a.remove(href="#") Удалить
+							.cart__btns
+								a.arrow-btn.bordered-btn(href="#") Продолжить покупки
+								a.arrow-btn.bordered-btn(href="#") Заказать в 1 клик
+								a.arrow-btn(href="#") Оформить заказ
+		include inc/footer.pug
+		include inc/scripts.pug

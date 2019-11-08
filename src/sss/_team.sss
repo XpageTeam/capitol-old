@@ -1,0 +1,160 @@
+.boss
+	display: flex
+
+	&__img
+		flex: none
+		margin-right: rem(56)
+
+		img
+			display: block
+
+	&__name
+		font-weight: bold
+		font-size: rem(24)
+		line-height: lh(32, 24)
+		margin: 0 0 rem(14)
+
+	&__desc
+		display: flex
+		flex-direction: column
+
+	&__text
+		margin: rem(30) 0 0
+
+		.text-page
+			line-height: lh(38, 14)
+
+		li
+
+			&:not(:first-child)
+				margin: 20px 0 0
+
+	&__btn
+		padding: rem(40) 0 0
+		margin: auto 0 0
+
+.job
+	color: #adb4c6
+
+.team-slider
+	position: relative
+
+	.slick
+
+		&-arrow
+			background: url("../img/ico-black-arrow.png") no-repeat
+			size: width("../img/ico-black-arrow.png") height("../img/ico-black-arrow.png")
+			position: absolute
+			top: calc(50% - height("../img/ico-black-arrow.png") / 2 - 32px - 2rem)
+
+			display: none
+
+		&-prev
+			right: calc(100% + 33px)
+			transform: rotateY(180deg)
+
+		&-next
+			left: calc(100% + 33px)
+
+	.swiper
+
+		&-wrapper
+			display: flex
+			flex-wrap: wrap
+			margin: 0 0 -40px -30px
+
+		&-slide
+			width: calc((100% - 30px * 4) / 4)
+			margin: 0 0 40px 30px
+
+.team
+
+	&__list
+
+		&:not(:first-child)
+			margin: rem(85) 0 0
+
+		&-title
+			font-weight: bold
+			font-size: rem(20)
+			line-height: lh(32, 20)
+			margin-bottom: 2rem
+
+.person
+
+	&__img
+		margin-bottom: rem(20)
+
+		img
+			display: block
+			width: 100%
+
+	&__name
+		font-size: rem(18)
+		line-height: lh(24, 18)
+		margin-bottom: 5px
+
+	&__job
+		margin-bottom: 1rem
+
+	&__phone, &__skype
+		padding-left: 30px
+		position: relative
+
+		&:not(:last-child)
+			margin-bottom: 12px
+
+		a
+			border-bottom: none
+
+	&__phone
+		background: url("../img/ico-call.svg") left center no-repeat
+		min-height: 14px
+
+	&__skype
+		background: url("../img/ico-skype.svg") left center no-repeat
+
+
+@media screen and (max-width: 1000px) and (min-width: 660px)
+	.team-slider
+
+		.swiper
+
+			&-wrapper
+				display: flex
+				flex-wrap: wrap
+				margin: 0 0 -30px -18px
+
+			&-slide
+				width: calc((100% - 18px * 3) / 3)
+				margin: 0 0 30px 18px
+
+
+
+@media screen and (max-width: 660px) and (min-width: 380px)
+	.team-slider
+
+		.swiper
+
+			&-wrapper
+				display: flex
+				flex-wrap: wrap
+				margin: 0 0 -25px -16px
+
+			&-slide
+				width: calc((100% - 16px * 2) / 2)
+				margin: 0 0 25px 16px
+
+@media screen and (max-width: 380px)
+	.team-slider
+
+		.swiper
+
+			&-wrapper
+				display: flex
+				flex-wrap: wrap
+				margin: 0 0 -25px -16px
+
+			&-slide
+				width: calc((100% - 16px * 1) / 1)
+				margin: 0 0 25px 16px

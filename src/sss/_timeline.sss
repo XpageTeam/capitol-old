@@ -1,0 +1,99 @@
+.timeline
+
+	&__title
+		font-weight: bold
+		font-size: rem(24)
+		line-height: lh(29, 24)
+
+		&-cont
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin: 0 0 rem(72)
+
+	&__arrows
+		display: flex
+		align-items: center
+
+		&:empty
+			display: none
+
+		.slick
+
+			&-arrow
+				flex: none
+				background: url("../img/ico-black-arrow.png") no-repeat
+				size: width("../img/ico-black-arrow.png") height("../img/ico-black-arrow.png")
+
+			&-prev
+				transform: rotateY(180deg)
+				margin-right: 65px
+
+	&__slider
+		position: relative
+		user-select: none
+
+		&:after
+			content: ""
+			position: absolute * * 0 50%
+			transform: translateX(-50%)
+			size: 100vw 1px
+			background: var(--border-color)
+
+		.swiper
+
+			&-slide
+				height: auto
+				display: flex !important
+				flex-direction: column
+
+		.slick
+
+			&-list
+				overflow: visible
+				z-index: 4
+
+			&-track
+				display: flex
+
+			&-slide
+				height: auto
+				display: flex !important
+				flex-direction: column
+
+				> div
+					display: flex
+					flex-direction: column
+					flex: 1 1 auto
+
+		&-slide
+			flex: 1 1 auto
+			display: flex !important
+			flex-direction: column
+
+.time-slide
+	display: flex
+	flex-direction: column
+	flex: 1 1 auto
+
+	&__year
+		flex: none
+		margin: rem(62) 0 0
+		transform: translateY(40px)
+		position: relative
+
+		&:before
+			content: ""
+			position: absolute * * calc(100% + 13px) 5px
+			size: 5px 14px
+			background: var(--main-color)
+
+	&__text
+		background: var(--second-color)
+		padding: 27px 30px
+
+		&-cont
+			flex: 1 1 auto
+			display: flex
+			flex-direction: column
+			justify-content: center

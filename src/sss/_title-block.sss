@@ -1,0 +1,37 @@
+.title-block
+
+	&__title
+		margin: 12px 0 0
+
+		h1
+			font-weight: bold
+			font-size: rem(24)
+			line-height: lh(29, 24)
+
+.bread-crumbs
+	font-size: 12px
+
+	&__link, &__this
+		flex: none
+		color: #adb4c6
+
+	&__link
+
+		&:not(:last-child)
+			margin-right: 35px
+			position: relative
+
+			&:after
+				content: ""
+				position: absolute
+				size: 1px 14px
+				background: #e1e5ee
+				right: -17px
+				bottom: 3px
+
+		a
+			border-bottom: none
+			color: inherit
+
+			&:matches(:hover, :focus)
+				color: var(--main-color)

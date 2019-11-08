@@ -1,0 +1,65 @@
+.sort
+	border: 1px solid var(--border-color)
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 18px 30px 19px
+	font-size: 14px
+	height: 61px
+
+	&:not(:last-child)
+		margin-bottom: 30px
+
+	&__select
+		border: none
+		margin-left: 10px
+		padding: 0 23px 0 8px
+		background: url("../img/ico-select-arrow.svg") right center no-repeat
+		color: var(--main-color)
+		font-weight: bold
+
+		&-label
+			font-weight: bold
+
+		&-cont
+			display: flex
+
+			&:first-child
+				margin-right: auto
+
+	&__view
+		fllex: none
+		margin-left: rem(45)
+
+.view
+	display: flex
+
+	&__list, &__plate
+		flex: none
+		display: block
+
+		&:not(:last-child)
+			margin-right: rem(17)
+
+	&__list
+		size: width("../img/ico-list.png") height("../img/ico-list.png")
+
+		&:not(.active)
+			background: url("../img/ico-list.svg") no-repeat
+
+		&.active
+			background: url("../img/ico-list-active.svg") no-repeat
+
+	&__plate
+		size: width("../img/ico-plate.png") height("../img/ico-plate.png")
+
+		&:not(.active)
+			background: url("../img/ico-plate.svg") no-repeat
+
+		&.active
+			background: url("../img/ico-plate-active.svg") no-repeat
+
+
+@media screen and (max-width: 1000px)
+	.sort
+		height: auto

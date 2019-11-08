@@ -1,0 +1,55 @@
+.delivery
+	display: flex
+
+	&__left
+		flex: 1 1 auto
+
+	&__right
+		flex: none
+		width: 390px
+		margin-left: rem(67)
+
+	&__text
+
+		ul
+
+			&[data-columns='2']
+				column-count: 2
+				columns-gap: 2rem
+
+			li
+
+				&:before
+					content: '' !important
+					background: url("../img/list-marker.png") no-repeat
+					size: width("../img/list-marker.png") height("../img/list-marker.png")
+					margin-right: 20px
+
+.delivery-banner
+	top: 20px
+	color: #fff
+	padding: rem(75) rem(75) rem(80) rem(53)
+	background: url("../img/deliv-banner-bg.png") right bottom no-repeat
+	background-color: var(--main-color)
+
+	&__title, &__phones
+		font-weight: bold
+
+	&__title
+		font-size: rem(26)
+		line-height: lh(33, 26)
+		margin-bottom: 18px
+
+	&__text
+
+		&:not(:last-child)
+			margin-bottom: 47px
+
+.delivery-phones
+	font-size: rem(18)
+	line-height: lh(33, 18)
+
+	a
+		color: inherit
+		border-bottom: none
+		display: inline-block

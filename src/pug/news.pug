@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Новости
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		
+		main#content
+			.inner-content__cont
+				.wrapper
+					.title-block
+						.title-block__crumbs
+							ul.bread-crumbs
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Главная" itemprop="url")
+										span(itemprop="title") Главная
+								li.bread-crumbs__this Новости
+						.title-block__title
+							h1 Новости
+					.inner-content
+						.news
+							each title, i in ["Челябинские первоклассники узнали, где находится столица сантехников", "Шаровые краны Бологое снова в наличии", "Как выбрать лучший смеситель? Три простых совета", "Поздравляем с Днём Строителя!", ]
+								.news__item
+									.news-item
+										a.news-item__img
+											img(src="img/photos/news-"+i+".jpg", alt=title)
+										.news-item__desc
+											.news-item__title
+												a(href="#")=title
+											.news-item__date 01.08.2018
+						include inc/paginator.pug
+		include inc/footer.pug
+		include inc/scripts.pug

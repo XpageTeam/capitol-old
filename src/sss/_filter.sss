@@ -1,0 +1,81 @@
+.filter
+	background: var(--second-color)
+	position: absolute 100% 0 * 0
+	display: none
+	z-index: 5
+
+	&__cont
+		position: relative
+
+	&__block
+		padding: 28px 36px 36px
+
+		&:not(:first-child)
+			border-top: 1px solid var(--border-color)
+
+	&__title
+		font-weight: bold
+		font-size: rem(16)
+		margin-bottom: 22px
+
+	&__btns
+		padding: 10px 36px 38px
+		border-top: 1px solid var(--border-color)
+		display: flex
+		justify-content: space-between
+		background: var(--second-color)
+		position: sticky
+		bottom: 0
+		z-index: 3
+
+.js__can-toggle
+	cursor: pointer
+	position: relative
+
+	&:after
+		content: ''
+		position: absolute calc(50% - 5px) 0 * *
+		size: 9px
+		border-top: 1px solid var(--main-color)
+		border-right: 1px solid var(--main-color)
+
+		transform: rotateZ(135deg)
+
+	&:not(.js__opened)
+		margin-bottom: 0
+
+		&:after
+			transform: rotateZ(-225deg)
+
+
+		+ .filter__checkboxes
+			display: none
+
+.filter__checkboxes
+	overflow-y: auto
+	max-height: 150px
+
+	&::-webkit-scrollbar
+		width: 9px
+
+		&-track
+			background: var(--border-color)
+
+		&-thumb
+			border-radius: 6px
+			background: var(--main-color)
+
+	li
+		display: block
+
+		&:not(:first-child)
+			margin: 14px 0 0
+
+.filter-checks
+	display: flex
+	flex-wrap: wrap
+	margin: 25px 0 -16px -12px
+
+	&__item
+		width: calc((100% - 12px * 2) / 2)
+		margin: 0 0 16px 12px

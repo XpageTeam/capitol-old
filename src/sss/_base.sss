@@ -1,0 +1,500 @@
+html
+	font-size: 100%
+
+input, a, button, textarea, select
+	outline: none
+
+*::-webkit-input-placeholder
+	color: #adb4c6
+	opacity: 1
+
+*:-moz-placeholder
+	color: #adb4c6
+	opacity: 1
+
+*::-moz-placeholder
+	color: #adb4c6
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #adb4c6
+	opacity: 1
+
+.slick-arrow
+	border: none
+	background: none
+	padding: 0
+	text-indent: -9999px
+	overflow: hidden
+
+.swiper-button-disabled
+	opacity: .5
+	pointer-events: none
+
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea, select, input[type="submit"], button
+	-webkit-appearance: none
+	appearance: none
+	font: inherit
+	border-radius: 0
+
+	&:focus
+
+		&::-webkit-input-placeholder
+			opacity: 0
+
+		&:-moz-placeholder
+			opacity: 0
+
+		&::-moz-placeholder
+			opacity: 0
+
+		&:-ms-input-placeholder
+			opacity: 0
+
+// #{$all-text-inputs}
+
+// 	&:not(.form-control):not(.comment-form__text)
+
+// 		&::-webkit-input-placeholder
+// 			color: #fff
+// 			opacity: 1
+
+// 		&:-moz-placeholder
+// 			color: #fff
+// 			opacity: 1
+
+// 		&::-moz-placeholder
+// 			color: #fff
+// 			opacity: 1
+
+// 		&:-ms-input-placeholder
+// 			color: #fff
+// 			opacity: 1
+
+*, *:after, *:before
+	box-sizing: border-box
+	font-family: var(--default-font) !important
+
+*[v-cloak]
+	display: none
+
+i.rub
+	font-family: "Roboto" !important
+	font-style: normal
+
+.product-item-detail-price-current
+	color: var(--main-color)
+
+.bx-blue .product-item-scu-item-text-block:hover, .bx-blue .product-item-scu-item-color-block:hover, .bx-blue .product-item-scu-item-text-container.selected .product-item-scu-item-text-block, .bx-blue .product-item-scu-item-color-container.selected .product-item-scu-item-color-block
+	outline-color: var(--main-color)
+
+.product-item-detail-tab-link:after
+	background: var(--main-color)
+
+.btn.btn-default
+	background: var(--main-color) !important
+	border-color: var(--main-color) !important
+
+.product-item-image-wrapper
+	padding: 150% 0 0
+	margin-bottom: 15px
+
+.product-item-big-card 
+
+	.product-item-title 
+
+		a
+			font-size: 17px
+			border: none
+
+.bx-catalog-element
+
+	.bx-title
+		display: none
+
+address
+	font-weight: inherit
+
+body
+	min-width: 320px
+	line-height: lh(24, 16)
+	font-family: var(--default-font)
+	font-weight: 400
+	font-size: 14px
+	background: #fff
+	color: #000
+	position: relative
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	overflow-x: hidden
+	margin: 0 !important
+	text-size-adjust: none
+
+	&.compensate-for-scrollbar
+		margin-right: 17px !important
+
+select
+	-webkit-appearance: none
+	/* for FF */
+	-moz-appearance: none
+	text-indent: 0.01px
+	text-overflow: ''
+	/* for IE */
+	-ms-appearance: none
+	appearance: none!important
+
+	&::-ms-expand
+		display: none
+
+.head, .footer
+	flex: none
+
+#content
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+
+a
+	color: #000
+	font-weight: inherit
+	text-decoration: none
+
+	&[href^="tel"], &[href^="mail"]
+		white-space: nowrap
+
+	&:not([class])
+		color: var(--main-color)
+		border-bottom: 1px solid currentColor
+
+		&:hover, &:focus
+			border-color: currentColor
+
+.wrapper
+	// width: var(--baseWidth)
+	max-width: var(--base-width)
+	padding: 0 2rem
+	margin: 0 auto
+	box-sizing: content-box
+
+input[type="submit"], button
+	cursor: pointer
+
+img, svg
+	max-width: 100%
+
+li
+	list-style: none
+
+.table-wrap
+	position: relative
+
+	&__track
+		overflow-x: auto
+		-webkit-overflow-scrolling: touch
+
+	&__shadow
+		width: 12px
+		position: absolute 0 *
+		pointer-events: none
+		background: linear-gradient(to right, rgba(#fff, .0001), rgba(#000, .1))
+		opacity: 0
+
+		&--left
+			left: 0
+			transform: rotateZ(180deg)
+
+		&--right
+			right: 0
+
+.standart-page
+
+	.text-page
+
+		> figure
+
+			figcaption
+				margin: 14px 0 0
+				background: var(--second-color)
+				padding: 20px 34px
+
+.swiper-pagination
+
+	&-bullet:exactly(1)
+		display: none
+
+.text-page
+
+	> *:not(:first-child)
+		margin-top: rem(25)
+		max-width: 940px
+
+	strong
+		font-weight: bold
+
+	h2, h3, h4, h5, h6
+		font-weight: bold
+
+	h2
+		font-size: rem(22)
+		line-height: lh(28, 22)
+
+	h3
+		font-size: rem(20)
+		line-height: lh(26, 20)
+
+	h4
+		font-size: rem(18)
+		line-height: lh(24, 18)
+
+	h5, h6
+		font-size: rem(16)
+		line-height: lh(24, 16)
+
+	blockquote
+		background: var(--second-color)
+		padding: rem(28) rem(50) rem(28) rem(55)
+		line-height: lh(26, 14)
+
+		a
+			font-size: rem(16)
+			border-bottom: none
+			font-weight: bold
+
+	[align="right"]
+		float: right
+		margin-left: 80px
+
+	[align="left"]
+		float: left
+		margin-right: 80px
+
+	& img[height]
+		height: auto
+
+	& img[align]
+		margin-bottom: rem(22)
+
+	& table
+
+		& td, & th
+			padding: 15px 23px
+			font-weight: 300
+
+			&:not([valign]), &[valign="middle"]
+				vertical-align: middle
+
+			&[valign="top"]
+				vertical-align: top
+
+			&[valign="bottom"]
+				vertical-align: bottom
+
+		&[cellspacing]:not([cellspacing="1"]):not([cellspacing="0"])
+
+	& table[border="1"]
+
+		& td, & th
+			border: 1px solid var(--border-color)
+
+	ul, ol
+		// list-style: none
+		max-width: 720px !important
+
+	li
+		//padding-left: 20px
+		position: relative
+		line-height: 1.3
+
+		&:not(:first-child)
+			margin: 10px 0 0
+
+		&:before
+			display: inline-block
+
+		ul, ol
+			margin-bottom: 20px
+			margin-top: 0
+
+		li
+			padding-left: 10px
+
+			&:before
+				margin-right: 10px !important
+
+			&:not(:first-child)
+				margin-top: 5px
+
+	ul
+
+		li
+			// padding-left: 25px
+
+			&:before
+				content: "—"
+				margin: 0 4px 0 -8px
+				display: inline-block
+
+			li
+				padding-left: 20px
+
+				&:before
+					content: "-"
+
+	& ol
+		counter-reset: i
+
+		& li
+			counter-increment: i
+
+			&:before
+				content: counter(i) "."
+				margin-right: 4px
+
+.table-wrap
+	overflow-x: auto
+
+.soc
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 -13px -11px
+	max-width: 184px
+
+	&__link
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 50%
+		background: #fff
+		size: 35px
+		margin: 0 0 13px 11px
+
+.swiper-list
+	overflow: hidden
+
+.more-btn
+	display: flex
+	align-items: center
+
+	span
+
+		&:first-child:not(:last-child)
+			margin-right: 29px
+
+	&__circle
+		border-radius: 50%
+		border: 1px solid #fff
+		background: url("../img/ico-white-arrow.svg") center no-repeat
+		size: 40px
+
+.dl-btn, .arrow-btn, .filter-btn, .default-btn, .second-btn, .bordered-btn, .gray-btn
+	display: inline-block
+	color: #fff
+	background-color: var(--main-color)
+	background-repeat: no-repeat
+	border: none
+	font-size: rem(14)
+	transition: background-color .3s ease, color .3s ease
+
+	&:hover, &:focus
+
+		&:not(:active)
+			background-color: lighten(#231f20, .1)
+
+.filter-btn
+	font-size: rem(16)
+	text-align: center
+	width: 100%
+	padding: 18px 20px 19px
+
+	&:after
+		content: ""
+		margin-left: 15px
+		display: inline-block
+		background: url("../img/ico-filter-arrow.png") no-repeat
+		size: width("../img/ico-filter-arrow.png") height("../img/ico-filter-arrow.png")
+
+.dl-btn
+	padding: 14px 54px 16px 28px
+	background-image: url("../img/ico-download.svg")
+	background-position: right 28px bottom 21px
+
+.bordered-btn,
+.default-btn, .gray-btn,
+.product-item-detail-buy-button,
+.sale-paysystem-button-container .btn.btn-default
+	padding: 16px 28px 17px
+
+.default-btn, .product-item-detail-buy-button,
+.sale-paysystem-button-container .btn.btn-default
+	color: #fff var(--main-color) !important
+	border: 1px solid var(--main-color)
+	transition: background .3s ease
+
+.second-btn, .bordered-btn
+	border: 1px solid var(--main-color)
+	color: #000
+
+.bordered-btn
+	color: #fff
+	background: none
+	// margin: -1px
+
+	&:hover, &:focus
+
+		&:not(:active)
+			color: #fff
+
+.gray-btn
+
+	&:matches(:hover, :focus, &.active)
+		color: #fff
+
+	&:not(.active, :focus, :hover)
+		background: var(--second-color)
+
+	&:not(:hover, :focus, .active), &:active
+		color: #000
+
+.arrow-btn
+
+	&:not(.arrow-btn--back)
+		padding: 14px 49px 16px 28px
+		background-image: url("../img/ico-white-arrow.svg")
+		background-position: right 23px bottom 23px !important
+
+		&.bordered-btn
+			padding-right: 49px
+			background-repeat: no-repeat
+
+			&:not(:hover, :focus)
+				background-image: url("../img/ico-white-arrow.svg")
+
+	&--back
+		padding: 14px 28px 16px 49px
+		position: relative
+
+		&:before
+			content: ""
+			background: url("../img/ico-white-arrow.svg") no-repeat
+			size: width("../img/ico-white-arrow.png") height("../img/ico-white-arrow.png")
+			position: absolute * * 23px 23px
+			transform: rotateY(180deg)
+
+		&.bordered-btn
+			padding-left: 49px
+
+			&:not(:hover, :focus)
+
+				&:before
+					background: url("../img/ico-white-arrow.svg") no-repeat
+
+.remove
+	display: inline-block
+	text-indent: -9999px
+	overflow: hidden
+	border-bottom: none !important
+	text-decoration: none
+	background: url("../img/ico-remove.svg") no-repeat
+	background-size: contain
+	size: width("../img/ico-remove.png") height("../img/ico-remove.png")

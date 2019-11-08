@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title МП Калибратор с ножами для снятия фаски 16-20-25
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		
+		main#content
+			.inner-content__cont
+				.wrapper
+					.title-block
+						.title-block__crumbs
+							ul.bread-crumbs
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Главная" itemprop="url")
+										span(itemprop="title") Главная
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Каталог" itemprop="url")
+										span(itemprop="title") Каталог
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Oventrop" itemprop="url")
+										span(itemprop="title") Oventrop
+								li.bread-crumbs__this МП Калибратор с ножами для снятия фаски 16-20-25
+						.title-block__title
+							h1 МП Калибратор с ножами для снятия фаски 16-20-25
+					.inner-content
+						.tovar
+							.tovar-main
+								.tovar-main__slider
+									.tovar-sliders
+										.tovar-sliders__big
+											.tovar-slider
+												button.slick-arrow.slick-prev
+												.swiper-wrapper
+													- for (let i = 0; i < 6; i++)
+														.swiper-slide
+															a.tovar-slider__slide.fancybox(href="img/photos/tovar-big-img.jpg" data-fancybox="tovar-gallery")
+																img(src="img/photos/tovar-big-img.jpg")
+												button.slick-arrow.slick-next
+												.swiper-pagination
+										.tovar-sliders__small
+											.tovar-slider-small
+												button.slick-arrow.slick-prev
+												.swiper-list
+													.swiper-wrapper
+														- for (let i = 0; i < 6; i++)
+															.swiper-slide
+																figure.tovar-slider-small__slide
+																	img(src="img/photos/tovar-small-img.jpg")
+												button.slick-arrow.slick-next
+								.tovar-main__desc
+									.tovar-desc
+										.tovar-desc__top
+											.tovar-desc__top-title
+												.tovar__title МП Калибратор с ножами для снятия фаски 16-20-25
+												.tovar__status
+													.cat-item__id артикул 06282
+													<!-- tovar__status-status--instock - в наличии, tovar__status-status--outoftock - нет в наличии -->
+													.tovar__status-status.tovar__status-status--instock В наличии
+											.tovar-desc__top-btn
+												a.arrow-btn.bordered-btn(href="#") Заказать монтаж
+										.tovar-desc__price
+											.cat-item__price-cont
+												.cat-item__price 151,00 
+													i.rub ₽
+												.cat-item__price-bot 110,00 
+													i.rub ₽
+										.tovar-desc__buy
+											.tovar-buy
+												.tovar-buy__title Выберите количество:
+												.tovar-buy__subtitle Продаётся кратно 1
+												.tovar-buy__counters
+													form(action="#")
+														.tovar-counters
+															.tovar-counters__item
+																.tovar-counter
+																	input.tovar-counter__radio#ct-1(type="radio" checked="" name="format")
+																	label.tovar-counter__label(for="ct-1") Поштучно
+																	.tovar-counter__input-cont
+																		input.tovar-counter__input(type="tel" value="1")
+															.tovar-counters__item
+																.tovar-counter
+																	input.tovar-counter__radio#ct-2(type="radio" name="format")
+																	label.tovar-counter__label(for="ct-2") В упаковках
+																	.tovar-counter__input-cont
+																		input.tovar-counter__input(type="tel" value="1")
+																		label.tovar-counter__input-label 1шт 
+																			br
+																			| в упаковке
+												.tovar-buy__bot
+													.tovar-buy__total Итого: 151,00
+														i.rub ₽
+													.tovar-buy__add-to-cart
+														<!-- класс added весит здесь из-за того что по макету кнопка должна быть такого цвета -->
+														a.add-to-cart.added(href="#")
+							.tovar__tabs
+								.tabs
+									.tabs__tabs
+										.tabs-tab.active(data-id="0") Полное описание
+										.tabs-tab(data-id="1") Сертификаты
+									.tabs__main
+										.tabs-content.active(data-id="0")
+											.text-page
+												p Предназначен для развальцовки и снятия фаски с мп трубы.
+										.tabs-content(data-id="1")
+											.text-page
+												p Тут должно что-то быть
+		include inc/footer.pug
+		include inc/scripts.pug

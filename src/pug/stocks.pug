@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Акции
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		
+		main#content
+			.inner-content__cont
+				.wrapper
+					.title-block
+						.title-block__crumbs
+							ul.bread-crumbs
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Главная" itemprop="url")
+										span(itemprop="title") Главная
+								li.bread-crumbs__this Акции
+						.title-block__title
+							h1 Акции
+					.inner-content
+						.stocks
+							- for (let i = 0; i < 2; i++)
+								each stock, i in [{title: "Суббота, понедельник - дни оптовых цен", text: "Каждую субботу на Троицком тракте 29 и в понедельник на ..."}, {title: "Дарим PEX-инструмент", text: "С 12 февраля при покупке трубы сшитый полиэтилен - PEX инструмент в подарок! "}, {title: "Ароматный завтрак с ТД \"СантехУрал\"", text: "Акция проходит каждую среду на Троицком тракте 29 с 9-00 до 12-00. "}, ]
+									.stocks__item
+										.stock
+											a.stock__img(href="#")
+												img(src="img/photos/stock-"+i+".jpg", alt=stock.title)
+											.stock__desc
+												a.stock__title(href="#")=stock.title
+												.stock__text=stock.text
+												.stock__time Действует до 18.09.2018
+		include inc/footer.pug
+		include inc/scripts.pug

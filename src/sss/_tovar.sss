@@ -1,0 +1,275 @@
+.tovar-main
+	display: flex
+
+	&__slider
+		width: 391px
+		flex: none
+		margin-right: rem(65)
+
+		.slick
+
+			&-arrow
+				background: url("../img/ico-black-arrow.png") no-repeat
+				size: width("../img/ico-black-arrow.png") height("../img/ico-black-arrow.png")
+				position: absolute
+				top: calc(50% - height("../img/ico-black-arrow.png") / 2)
+
+			&-prev
+				left: 0
+				transform: rotateY(180deg)
+
+			&-next
+				right: 0
+
+	&__desc
+		// width: calc(100% - 356px)
+		flex: 1 1 auto
+
+	&__desc, &__slider
+		display: flex
+		flex-direction: column
+
+.tovar-sliders, .tovar-desc
+	display: flex
+	flex-direction: column
+	flex: 1 1 auto
+	
+.tovar-sliders
+
+	&__big
+		flex: 1 1 auto
+		display: flex
+		flex-direction: column
+
+	&__small
+		padding: 15px 0 0
+		margin: auto 0 0
+		flex: none
+
+.tovar-desc
+
+	&__top
+		display: flex
+		justify-content: space-between
+
+	&__buy
+		padding: rem(40) 0 0
+		margin: auto 0 0
+
+.tovar-slider
+	border: 1px solid var(--border-color)
+	position: relative
+	display: flex
+	flex-direction: column
+	flex: 1 1 auto
+
+	.swiper
+
+		&-wrapper
+			height: auto
+			flex: 1 1 auto
+
+		&-slide
+			height: auto
+			display: flex
+			flex-direction: column
+
+	&__slide
+		display: flex
+		flex: 1 1 auto
+		justify-content: center
+		align-items: center
+
+		img
+			display: block
+
+.tovar-slider-small
+	position: relative
+	padding: 0 30px
+
+	&__slide
+		border: 1px solid var(--border-color)
+
+		img
+			display: block
+
+.tovar
+
+	&__title
+		max-width: 280px
+		font-size: rem(18)
+		line-height: lh(24, 18)
+		margin: 0 0 14px
+
+	&__status
+		display: flex
+		align-items: center
+
+		.cat-item__label
+			position: static
+
+			margin-left: 2rem
+
+		.cat-item__id
+			display: inline-block
+			margin-bottom: 0
+
+			&:not(:last-child)
+				margin-right: 2rem
+
+		&-status
+
+			&--instock
+				color: var(--main-color)
+
+	&__tabs
+		margin: rem(80) 0 0
+
+.tovar-desc
+
+	&__price
+		margin: rem(34) 0 0
+
+		.cat-item
+
+			&__price
+				font-size: rem(28)
+
+				&-cont
+					flex-direction: column
+
+.tovar-buy
+	background: var(--second-color)
+	padding: rem(40) rem(50) rem(43)
+
+	&__title
+		margin-bottom: 10px
+
+	&__subtitle
+		font-size: 12px
+		color: #858a98
+
+	&__counters
+		margin: 27px 0 0
+
+	&__bot
+		display: flex
+		align-items: center
+		margin: rem(31) 0 0
+
+	&__total
+		font-weight: bold
+		font-size: rem(24)
+		line-height: lh(29, 24)
+
+		&:not(:last-child)
+			margin-right: rem(47)
+
+.tovar-counters
+	display: flex
+	flex-wrap: wrap
+
+	&__item
+
+		&:not(:last-child)
+			margin-right: rem(74)
+
+.tovar-counter
+
+	&__radio
+		display: none
+
+		&:checked
+
+			+ label
+				color: #000
+
+				&:after
+					opacity: 1
+
+			~ .tovar-counter__input-cont
+
+				.tovar-counter__input
+					color: #000
+
+
+	&__label
+		padding-left: 24px
+		position: relative
+		color: #adb4c6
+		transition: color .3s ease
+		bottom: 13px
+
+		&:before, &:after
+			content: ""
+			position: absolute
+			border-radius: 50%
+
+		&:before
+			background: #fff
+			size: 9px
+			left: 0
+			top: 4px
+
+		&:after
+			transition: opacity .3s ease
+			opacity: 0
+			background: var(--main-color)
+			size: 5px
+			left: 2px
+			top: 6px
+
+	&__input
+		border: none
+		size: 112px 40px
+		padding: 5px 20px
+		flex: none
+		color: #adb4c6
+		transition: color .3s ease
+
+		&:not(:last-child)
+			margin-right: 18px
+
+		&-cont
+			display: flex
+			align-items: center
+
+		&-label
+			color: var(--main-color)
+
+.tabs
+	
+	&__tabs
+		display: flex
+
+	&-tab
+		padding: 14px 24px 16px
+		cursor: pointer
+		user-select: none
+		background: var(--second-color)
+		transition: color .3s ease, background .3s ease
+
+		&.active
+			background: var(--main-color)
+			color: #fff
+
+	&__main
+		padding-top: 25px
+		position: relative
+
+	&-content
+		// position: absolute
+		// pointer-events: none
+		// opacity: 0
+		display: none
+		font-size: rem(14)
+		max-width: 850px
+
+		&.active
+			display: block
+
+@media screen and (min-width: 1000px)
+	.tovar-slider 
+
+		.slick-arrow
+			display: none

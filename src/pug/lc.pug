@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Личный кабинет
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		
+		main#content
+			.inner-content__cont
+				.wrapper
+					.title-block
+						.title-block__crumbs
+							ul.bread-crumbs
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Главная" itemprop="url")
+										span(itemprop="title") Главная
+								li.bread-crumbs__this Личный кабинет
+						.title-block__title
+							h1 Личный кабинет
+					.inner-content
+						.lc
+							.lc__btns
+								.lc__btns-main
+									each btn, i in ["Мой кабинет", "Мои заказы", "Сменить пароль", ]
+										if (i == 0)
+											a.gray-btn.active(href="#")=btn
+										else
+											a.gray-btn(href="#")=btn
+								.lc__btns-exit
+									a.bordered-btn(href="#") Выход
+							.lc__content
+								.lc-data
+									.lc-data__list
+										each data, i in ["Название организации: ООО “СантехУрал”", "Город: Челябинск", "ИНН: 7448098489", "КПП: 744801001", "ОГРН: 1077448013422", ]
+											.lc-data__row
+												span=data
+									.lc-data__btn
+										a.arrow-btn(href="#") Изменить
+		include inc/footer.pug
+		include inc/scripts.pug

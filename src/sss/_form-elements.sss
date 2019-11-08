@@ -1,0 +1,235 @@
+.popup-form
+	display: none
+	border: 1px solid var(--border-color)
+	padding: rem(38) rem(47) rem(44) !important
+	width: 450px
+
+	&__title
+		font-weight: bold
+		text-align: center
+		font-size: rem(26)
+		margin-bottom: rem(26)
+
+#auth
+	max-width: 389px
+
+.forms-checkbox
+	position: relative
+	margin-left: 30px
+
+.forms__checkbox
+	position: absolute 0 * * 0
+	opacity: 0
+	pointer-events: none
+
+	&:checked
+
+		~ label
+
+			&:after
+				opacity: 1
+
+	&-label
+		cursor: pointer
+		display: flex
+		position: relative
+		user-select: none
+
+		&:before, &:after
+			content: ""
+			display: inline-block
+
+		&:before
+			flex: none
+			background: #fff
+			border: 1px solid var(--second-color)
+			margin: 0 15px 0 0
+			size: 19px
+
+		&:after
+			border: 1px solid var(--main-color)
+			border-top: none
+			border-left: none
+			size: 6px 10px
+			transform: rotateZ(45deg)
+			position: absolute 3px * * 7px
+			transition: opacity .1s ease
+			opacity: 0
+
+.checkbox
+	position: relative
+
+	&__input
+		position: absolute 0 * * 0
+		opacity: 0
+		pointer-events: none
+
+		&:checked
+
+			~ label
+
+				&:after
+					opacity: 1
+
+	&__label
+		cursor: pointer
+		display: flex
+		position: relative
+		user-select: none
+
+		&:before, &:after
+			content: ""
+			display: inline-block
+
+		&:before
+			flex: none
+			background: #fff
+			border: 1px solid var(--second-color)
+			margin: 0 15px 0 0
+			size: 19px
+
+		&:after
+			border: 1px solid var(--main-color)
+			border-top: none
+			border-left: none
+			size: 6px 10px
+			transform: rotateZ(45deg)
+			position: absolute 3px * * 7px
+			transition: opacity .1s ease
+			opacity: 0
+
+.forms-wrap
+	display: flex
+	flex-wrap: wrap
+
+	&--column
+		flex-direction: column
+		margin: 0 !important
+		flex-wrap: nowrap
+
+		.forms
+
+			&__input-cont
+
+				&:not(:first-child)
+					margin: 18px 0 0
+
+.forms
+
+	&__input
+		border: 1px solid var(--border-color)
+		padding: 3px 10px
+		min-height: 47px
+		transition: border-color .3s ease
+
+		&:focus
+			border-color: var(--mainColor)
+
+		&_error:not(:valid)
+			border-color: red
+
+			~ .forms__error-message
+				opacity: 1
+
+			&:focus
+
+			~ .forms__error-message
+				opacity: 0
+
+		&-cont
+			display: flex
+			flex-direction: column-reverse
+			position: relative
+
+		&[required] ~ label
+
+			&:after
+				content: "*"
+				display: inline-block
+				color: red
+
+		&--textarea
+			max-width: 100%
+			resize: none
+
+	&__label
+		margin-bottom: 14px
+		flex: none
+
+.forms-bot
+	margin: 28px 0 0
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	&__links
+		text-align: right
+
+	input[type="submit"]
+
+		&:first-child:last-child
+			width: 100%
+
+.form-links
+
+	&__link
+		color: var(--main-color)
+		border-bottom: 1px solid #d4e3f6
+
+
+
+.forms
+	
+	&__error
+
+		&-message
+			border: 1px solid #d4d4d4
+			background: #fff
+			color: #000
+			padding: 7px 10px
+			border-radius: 7px
+			position: absolute
+			bottom: 45px
+			right: -6px
+			box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.1)
+			transition: opacity .3s ease
+			user-select: none
+			font-size: 12px
+
+			opacity: 0
+			pointer-events: none
+
+			&:after
+				content: ""
+				background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAIBAMAAADU/bjBAAAAGFBMVEX////V1dXV1dXY2Nji4uL9/f3+/v7///88REMWAAAAA3RSTlMAipDLFSdbAAAAM0lEQVQI12NwKweBMgcGlXQQI0WBgQkkVObEwAAWAgowgITAAiAhsABQyBUiwMAgLAAkAJ+wDc+KWF7qAAAAAElFTkSuQmCC)
+				position: absolute
+				top: calc(100% - 0px)
+				right: 19px
+				height: 8px
+				width: 15px
+
+			&-icon
+				display: block
+				border-radius: 50%
+				position: absolute
+				border: 1px solid #ff0024
+				height: 19px
+				width: 19px
+				background: #fff
+				bottom: -32px
+				right: 16px
+
+				&:before, &:after
+					content: ""
+					position: absolute
+					width: 1px
+					background: #ff0024
+					left: calc(50% - 1px)
+
+				&:before
+					top: 4px
+					height: 8px
+
+				&:after
+					bottom: 4px
+					height: 2px

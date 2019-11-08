@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title История компании
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		
+		main#content
+			.inner-content__cont
+				.wrapper
+					.title-block
+						.title-block__crumbs
+							ul.bread-crumbs
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Главная" itemprop="url")
+										span(itemprop="title") Главная
+								li.bread-crumbs__this История компании
+						.title-block__title
+							h1 История компании
+					.inner-content
+						.about
+							.about__history
+								.history
+									figure.history__img
+										img(src="img/photos/history-img.jpg")
+									.history__text
+										.text-page
+											p Сергей  Владимирович Ермаков, генеральный директор компании ООО  Торговый дом «СантехУрал», начал свою деятельность практически с ноля –  стартовым капиталом стали 3 смесителя для ванны производства г. Орск, купленные его матерью.  В бизнес он, как и многие в то время, пришел вынужденно: денег не хватало, нужно было кормить семью.
+											p В то время дорога от Торгового Центра к Зеленому рынку была для многих торговцев настоящей «дорогой жизни», а для Сергея Ермакова стала началом большого пути в бизнес.
+				.about__timeline
+					.wrapper
+						.timeline
+							.timeline__title-cont
+								.timeline__title Краткая сводка истории компании
+								.timeline__arrows
+									button.slick-arrow.slick-prev
+									button.slick-arrow.slick-next
+							.timeline__slider
+								.swiper-wrapper
+									- for (let i = 0; i < 2; i++)
+										each item in [{text: "Существенное расширение ассортимента. Сергей Ермаков впервые нанимает сотрудников.", year: 1994}, {text: "15 января официально зарегистрирован Частный предприниматель Ермаков Сергей Владимирович. Открылся оптовый торговый склад на улице Сормовской 32, началось сотрудничество с магазинами «Самоделкин», «Юрюзань», «Стеклорез» и «Хозтовары» на Свердловском проспекте.", year: 1995}, {text: "Год ознаменован первой действительно крупной поставкой – 3-х тонный контейнер изоленты ПВХ из города Новосибирска производства завода «Химпласт».", year: 1997}, {text: "Кризис.  Заключен договор с Казанским заводом «Сантехприбор» о поставке смесителей взаимозачетом на металлопрокат.  Появился первый автомобиль в автопарке компании – зеленая цельнометаллическая семиместная  «Газель».", year: 1998}, ]
+											.swiper-slide
+												.timeline__slider-slide
+													.time-slide
+														.time-slide__text-cont
+															.time-slide__text=item.text
+														.time-slide__year=item.year
+			include inc/footer.pug
+		include inc/scripts.pug

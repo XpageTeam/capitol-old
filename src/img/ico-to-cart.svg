@@ -1,0 +1,17 @@
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="22.5px" height="27.049px" viewBox="0 0 22.5 27.049" style="enable-background:new 0 0 22.5 27.049;" xml:space="preserve"
+	>
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<polyline class="st0" points="0.75,5.59 4.983,8.73 6.726,19.994 18.679,19.994 21.75,10.682 8.22,9.834 	"/>
+	<path class="st0" d="M7.93,19.994"/>
+	<path class="st0" d="M18.534,23.09H7.37c-0.719,0-1.307-0.697-1.307-1.548v0c0-0.852,0.588-1.548,1.307-1.548"/>
+	<path class="st1" d="M11.784,4.632l1.875,1.917 M15.535,4.632L13.66,6.549"/>
+	<line class="st1" x1="13.66" y1="6.164" x2="13.66" y2="0.549"/>
+	<ellipse class="st1" cx="9.117" cy="25.058" rx="1.459" ry="1.491"/>
+	<ellipse class="st1" cx="16.084" cy="25.058" rx="1.459" ry="1.491"/>
+</g>
+</svg>

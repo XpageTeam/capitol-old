@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Личный кабинет
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		
+		main#content
+			.inner-content__cont
+				.wrapper
+					.title-block
+						.title-block__crumbs
+							ul.bread-crumbs
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Главная" itemprop="url")
+										span(itemprop="title") Главная
+								li.bread-crumbs__this Личный кабинет
+						.title-block__title
+							h1 Личный кабинет
+					.inner-content
+						.lc
+							.lc__btns
+								.lc__btns-main
+									each btn, i in ["Мой кабинет", "Мои заказы", "Сменить пароль", ]
+										if (i == 1)
+											a.gray-btn.active(href="#")=btn
+										else
+											a.gray-btn(href="#")=btn
+								.lc__btns-exit
+									a.bordered-btn(href="#") Выход
+							.lc__content
+								.lc-orders
+									nav.lc-orders__menu
+										ul.orders-menu
+											each title, i in ["Текущие", "Завершенные", "Все", ]
+												li.orders-menu__item
+													if (i == 2)
+														a.orders-menu__link.active(href="#")=title
+													else
+														a.orders-menu__link(href="#")=title
+									.lc-orders__list
+										.orders
+											each status, i in ["Принят", "Выплонен", "Отменён"]
+												.orders__item
+													.orders-item
+														.orders-item__head
+															.orders-item__title="Заказ № "+i
+															.orders-item__date 14.04.2018
+															.orders-item__more
+																a(href="#") Подробнее о заказе
+														.orders-item__body
+															.orders-item__desc
+																.orders-item__desc-title Состав заказа 
+																.orders-desc
+																	.orders-desc__left
+																		ul
+																			li Сумма к оплате: 
+																				b 6 659,00 
+																					i.rub ₽
+																			li Оплачен: Да
+																			li Способ оплаты: Наличные курьеру
+																		.orders-desc__list-title Состав заказа:
+																		ul.orders-desc__list
+																			li МП Калибратор с ножами для снятия фаски 16-20-25- 1 шт.
+																			li ППР малошум Крест 90 110x110x50 Левый 2 плоскости - 1 шт.
+																			li ППР малошум Крест 90 110x110x50 Левый 2 плоскости - 1 шт.
+																			li ППР малошум Крест 90 110x110x50 Левый 2 плоскости - 1 шт.
+																			li ППР малошум Крест 90 110x110x50 Левый 2 плоскости - 1 шт.
+																			li ППР малошум Крест 90 110x110x50 Левый 2 плоскости - 1 шт.
+																			li ППР малошум Крест 90 110x110x50 Левый 2 плоскости - 1 шт.
+																			li ППР малошум Крест 90 110x110x50 Левый 2 плоскости - 1 шт.
+																			li ППР малошум Крест 90 110x110x50 Левый 2 плоскости - 1 шт.
+																			li ППР малошум Крест 90 110x110x50 Левый 2 плоскости - 1 шт.
+																			li ППР малошум Крест 90 110x110x50 Левый 2 плоскости - 1 шт.
+																			li ППР малошум Крест 90 110x110x50 Левый 2 плоскости - 1 шт.
+																		a.orders-desc__list-toggle(href="#") 
+																			span Заказ полностью
+																	.orders-desc__right
+																		.orders-item__date 16.04.2018
+																		.orders-desc__status
+																			if (i == 0)
+																				.status.status--received=status
+																			else if (i == 1)
+																				.status.status--done=status
+																			else
+																				.status.status--canceled=status
+																		.orders-desc__btn
+																			a.default-btn(href="#") Отменить заказ
+		include inc/footer.pug
+		include inc/scripts.pug

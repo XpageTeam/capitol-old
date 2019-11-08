@@ -1,0 +1,101 @@
+.main-news
+	padding: rem(65) 0 0
+	display: flex
+	flex-wrap: wrap	
+	justify-content: space-between
+
+	&__title
+		font-weight: bold
+		font-size: rem(24)
+		line-height: lh(22, 24)
+
+		&-cont
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-bottom: 35px
+			width: 100%	
+
+	&__all
+		flex: none
+		margin-left: 2rem
+
+.main-news
+
+	&__big, &__list, &__list-item
+		display: flex
+		flex-direction: column
+
+	&__big
+		width: 555px
+
+	&__list
+		width: calc(100% - 585px)
+
+		&-item
+			flex: 1 1 auto
+
+			&:not(:first-child)
+				margin: 30px 0 0
+
+.small-news
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: flex-start
+	border: 1px solid var(--border-color)
+	padding: 14px rem(102) 14px 44px
+	position: relative
+
+	&:after
+		content: ""
+		background: url("../img/ico-black-arrow.png") no-repeat
+		size: width("../img/ico-black-arrow.png") height("../img/ico-black-arrow.png")
+		position: absolute calc(50% - width("../img/ico-black-arrow.png") / 2) 45px * *
+
+	&__date
+		font-size: rem(12)
+		background: var(--second-color)
+		border-radius: 22px
+		padding: 8px 15px
+		margin-bottom: 18px
+
+	&__text
+		font-size: rem(16)
+
+.big-news
+	display: flex
+	flex-direction: column
+	flex: 1 1 auto
+	border: 1px solid var(--border-color)
+
+	&__img
+		flex: none
+		position: relative
+		text-align: center
+
+		&-date
+			font-size: rem(12)
+			background: #fff
+			border-radius: 22px
+			padding: 8px 15px
+			position: absolute 37px * * 48px
+
+	&__title
+		font-size: rem(16)
+		margin-bottom: 15px
+		line-height: lh(22, 16)
+	
+	&__desc
+		// border: 1px solid var(--borderColor)
+		border-top: none
+		flex: 1 1 auto
+		position: relative
+		padding: 33px rem(100) 34px 44px
+
+		&:after
+			content: ""
+			background: url("../img/ico-black-arrow.png") no-repeat
+			size: width("../img/ico-black-arrow.png") height("../img/ico-black-arrow.png")
+			position: absolute calc(50% - width("../img/ico-black-arrow.png") / 2) 44px * *

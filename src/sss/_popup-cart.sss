@@ -1,0 +1,80 @@
+.head-cart__popup
+	position: absolute
+	top: 100%
+	right: 2rem
+	background: #fff
+	z-index: 20
+	box-shadow: var(--box-shadow)
+	max-width: 717px
+	transition: opacity .3s ease
+	opacity: 0
+	pointer-events: none
+
+	&:before
+		content: ""
+		position: absolute * 86px 100% *
+		size: 0
+		border-style: solid
+		border-width: 0 12px 12px
+		border-color: transparent transparent #fff transparent
+
+	&.js__visible
+		opacity: 1
+		pointer-events: all
+
+.popup-cart
+	color: #000
+
+	&__list
+		overflow-y: auto
+		max-height: 248px
+		padding: 12px 0
+
+		&::-webkit-scrollbar
+			width: 14px
+			background: var(--second-color)
+			// padding: 0 3px
+			cursor: pointer
+
+			&-thumb
+				background: var(--main-color)
+				border: 3px solid var(--second-color)
+
+			&-button
+				size: 14px 10px
+
+				&:start
+					background: url("../img/ico-scrollbar-arrow.png") center no-repeat
+
+				&:end
+					background: url("../img/ico-scrollbar-arrow-bot.png") center no-repeat
+
+	.cart-table
+
+		td
+			padding: rem(20)
+			border: none !important
+
+			&:first-child
+				padding-left: rem(40)
+
+		tr
+
+			&:not(:first-child)
+
+				td
+					padding-top: 0
+
+	&__footer
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: rem(23) rem(47) rem(27)
+		border-top: 1px solid var(--border-color)
+
+		&-summary
+			font-weight: bold
+			font-size: rem(20)
+
+			.price
+				white-space: nowrap

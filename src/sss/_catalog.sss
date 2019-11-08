@@ -1,0 +1,33 @@
+.catalog
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 -33px -31px
+
+	&__item
+		width: calc((100% - 31px * 2) / 2)
+		margin: 0 0 33px 31px
+		display: flex
+		flex-direction: column
+
+		.main-cat-block
+
+			&__item
+				flex: 1 1 auto
+				margin: 0 !important
+				width: auto !important
+				background: var(--second-color)
+
+				&-img
+					position: absolute 0 0 0 0
+					width: 100%
+					max-height: 100%
+					overflow: hidden
+
+				&-desc
+					position: relative
+					top: auto
+					bottom: auto
+					right: auto
+					left: auto
+					z-index: 2
+					padding: 30px 120px 70px 39px

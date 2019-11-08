@@ -1,0 +1,33 @@
+.paginator
+	display: flex
+	justify-content: center
+	margin: rem(65) 0 0
+
+	&-arrow, &__link
+		display: block
+		border-radius: 50%
+		size: 30px
+
+	&-arrow
+		background: url("../img/ico-paginator-arrow.png") center no-repeat
+
+	li
+
+		&:first-child
+
+			.paginator-arrow
+				transform: rotate(180deg)
+
+	&__link
+		line-height: 30px
+		font-size: rem(14)
+		text-align: center
+
+		&.active
+			color: #fff
+			background: var(--main-color)
+
+	li
+
+		&:not(:last-child)
+			margin-right: 6px

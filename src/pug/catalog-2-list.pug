@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Oventrop
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		
+		main#content
+			.inner-content__cont
+				.wrapper
+					.title-block
+						.title-block__crumbs
+							ul.bread-crumbs
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Главная" itemprop="url")
+										span(itemprop="title") Главная
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Каталог" itemprop="url")
+										span(itemprop="title") Каталог
+								li.bread-crumbs__this Oventrop
+						.title-block__title
+							h1 Oventrop
+					.inner-content
+						.catalog2
+							.catalog2__top
+								.catalog2__top-filter
+									include inc/filter.pug
+								.catalog2__top-sort
+									include inc/sort.pug
+							.catalog2__container
+								.cat2.list
+									- for (let i = 0; i < 4; i++)
+										each title, i in ["МП Калибратор с ножами для снятия фаски 16-20-25", "ППР малошум Крест 90 110x110x50 Левый 2 плоскости", "РЕХ инструмент запресовщик + расширитель Dn16-20 (DL1225)"]
+											.cat2__item
+												.cat-item
+													.cat-item__label
+														.label.label--stock Акция
+													a.cat-item__img(href="#")
+														img(src="img/photos/stock-img-"+i+".jpg", alt=title)
+													.cat-item__title
+														a(href="#")=title
+													.cat-item__id артикул 06282
+													.cat-item__buy
+														.cat-item__price-cont
+															.cat-item__price 151,00 
+																i.rub ₽
+															.cat-item__price-bot 110,00 
+																i.rub ₽
+														.cat-item__to-cart
+															include inc/counter.pug
+															a.add-to-cart(href="#")
+						include inc/paginator.pug
+		include inc/footer.pug
+		include inc/scripts.pug

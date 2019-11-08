@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Наша команда
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		
+		main#content
+			.inner-content__cont
+				.wrapper
+					.title-block
+						.title-block__crumbs
+							ul.bread-crumbs
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Главная" itemprop="url")
+										span(itemprop="title") Главная
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Главная" itemprop="url")
+										span(itemprop="title") О компании
+								li.bread-crumbs__this Наша команда
+						.title-block__title
+							h1 Наша команда
+					.inner-content
+						.team
+							.team__boss
+								.boss
+									figure.boss__img
+										img(src="img/photos/boss.jpg")
+									.boss__desc
+										.boss__name Ермаков 
+											br
+											| Сергей Владимирович
+										.boss__subtitle
+											span.job Генеральный директор компании ТД "СантехУрал"
+										.boss__text
+											.text-page
+												ul
+													li Кандидат экономических наук
+													li Вице-президент Южно-Уральской торгово-промышленной палаты
+													li Член Штаба Челябинского регионального отделения Общероссийского общественного движения НАРОДНЫЙ ФРОНТ "ЗА РОССИЮ". 
+													li Общественный представитель Уполномоченного по защите прав предпринимателей Челябинской области по защите малого и среднего предпринимательства
+													li Учредитель и председатель Совета Благотворительного 
+														a(href="#") фонда "Мечта"
+													li Главный организатор ежегодного всероссийского 
+														a(href="#") чемпионата профессионального мастерства "Лучший сантехник. Кубок России"
+										.boss__btn
+											a.arrow-btn(href="#") Личный сайт
+							.team__list
+								.team__list-title Менеджеры
+								.team-slider
+									button.slick-prev.slick-arrow
+									.swiper-list
+										.swiper-wrapper
+											- for (let i = 0; i < 2; i++)
+												each person, j in [{name: "Олеся Курочкина", job: "Менеджер по продажам", skype: "sntx_kurochkina"}, {name: "Егор Олексюк", job: "Оператор торгового зала"}, {name: "Евгений Бурлака", job: "Менеджер отдела продаж"}, {name: "Ирина Акимова", job: "Оператор торгового зала"}, ]
+													.swiper-slide
+														.person
+															figure.person__img
+																img(src="img/photos/pers-"+j+".jpg")
+															.person__name=person.name
+															.person__job
+																span.job=person.job
+															address.person__phone
+																a(href="tel:+7 (351) 729-88-58") +7 (351) 729-88-58
+															if (person.skype)
+																address.person__skype
+																	a(href="#")=person.skype
+										.swiper-pagination
+									button.slick-next.slick-arrow
+							.team__list
+								.team__list-title Склад
+								.team-slider
+									button.slick-prev.slick-arrow
+									.swiper-list
+										.swiper-wrapper
+											- for (let i = 0; i < 1; i++)
+												each person, j in [{name: "Андрей Лукьянов", job: "Заведующий складом (Северо-крымская 18А)"}, {name: "Алексей Поликарпов", job: "Заведующий складом (Металлбаза)"}]
+													.swiper-slide
+														.person
+															figure.person__img
+																img(src="img/photos/pers-1"+j+".jpg")
+															.person__name=person.name
+															.person__job
+																span.job=person.job
+										.swiper-pagination
+									button.slick-next.slick-arrow
+		include inc/footer.pug
+		include inc/scripts.pug

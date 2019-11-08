@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title формы
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		
+		main#content
+			.inner-content__cont
+				.wrapper
+					.title-block
+						.title-block__crumbs
+							ul.bread-crumbs
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Главная" itemprop="url")
+										span(itemprop="title") Главная
+								li.bread-crumbs__this формы
+						.title-block__title
+							h1 формы
+					.inner-content
+						.cart
+							.forms-list
+								a.default-btn.fancybox(href="#auth") Вход
+								a.default-btn.fancybox(href="#reg") Регистрация
+		include inc/footer.pug
+		.popup-form#auth
+			.popup-form__title Вход
+			.popup-form__content
+				form(action="")
+					.forms-wrap.forms-wrap--column
+						.forms__input-cont
+							input.forms__input(type="text" required="" placeholder="E-mail")
+							label.forms__label Логин
+						.forms__input-cont
+							input.forms__input(type="password" required="")
+							label.forms__label Пароль
+					.forms-bot
+						input.arrow-btn(type="submit" value="Войти")
+						.forms-bot__links
+							.form-links
+								a.form-links__link.fancybox(href="#forgot") Забыли пароль?
+								a.form-links__link.fancybox(href="#reg") Регистрация
+		.popup-form#reg
+			.popup-form__title Регистрация
+			.popup-form__content
+				form(action="")
+					.forms-wrap.forms-wrap--column
+						.forms__input-cont
+							input.forms__input(type="text" required="")
+							label.forms__label ФИО
+						.forms__input-cont
+							input.forms__input(type="text" required="")
+							label.forms__label E-mail
+						.forms__input-cont
+							input.forms__input(type="password" required="")
+							label.forms__label Пароль
+						.forms__input-cont
+							input.forms__input(type="password" required="")
+							label.forms__label Повторить пароль
+					.forms-bot
+						input.arrow-btn(type="submit" value="Зарегистрироваться")
+		include inc/scripts.pug

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Главная
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		
+		main#content
+			.main-content
+				.wrapper
+					.main-content__catalog
+						.main-catalog
+							aside.main-catalog__aside
+								nav.main-catalog__nav
+									ul.main-cat
+										each item, i in ["Запорная, регулирующая и предохранительная арматура", "Канализация", "Комплектующие для бытовой техники", "Котлы отопления", "Насосы", "Приборы учета и контроля безопасности", "Принадлежности для санитарной комнаты", "Рабочий инструмент", "Радиаторы отопления", "Санфаянс", "Сифоны, арматура и комплектующие", "Смесители", "Стальные элементы трубопровода", "Трубы и фитинги", "Теплый пол", "Фильтры", "Хозтовары и расходные материалы", ]
+											li.main-cat__item
+												a.main-cat__link.have-sub(href="#")
+													figure.main-cat__link-img
+														img(src="img/photos/menu-"+i+".png")
+														//- img(class="hover-img" src="img/photos/menu-"+i+"-hover.png")
+													span=item
+												ul.main-cat__submenu
+													li.main-cat__submenu__close
+													each sub in ["Редукторы давления", "Клапаны трехходовые", "Клапаны (вентили)", "Краны водоразборные", "Клапаны обратные", "Краны шаровые", "Задвижки", "Затворы поворотные", ]
+														li
+															a.main-cat__submenu-link(href="#")=sub
+							.main-catalog__right
+								.main-slider__cont
+									.main-slider
+										.swiper-wrapper
+											- for (let i = 0; i < 3; i++)
+												.swiper-slide
+													.main-slider__slide
+														.main-slide
+															.main-slide__img
+																img(src="img/photos/main-slider-img.jpg")
+															.main-slide__desc
+																.main-slide__title День оптовых цен
+																.main-slide__subtitle в понедельник и пятницу
+																.main-slide__btn
+																	a.arrow-btn(href="#") Подробнее
+										.swiper-pagination
+								.main-catalog__list
+									.main-cat-block
+										each title, i in ["Oventrop", "Водо-нагреватели", "Ванны, поддоны и мойки", "Газовое оборудование", "Для дома и дач", "Гидрострелки и стальные коллекторы", ]
+											a.main-cat-block__item(href="#")
+												.main-cat-block__item-desc
+													.main-cat-block__item-title=title
+												figure.main-cat-block__item-img
+													img(src="img/photos/main-cat-"+i+".jpg", alt=title)
+				.main-sliders__cont
+					.wrapper
+						.main-sliders
+							.main-sliders__title-cont
+								.main-sliders__title.active(data-id="stock") Акции
+								.main-sliders__switcher
+									.sliders-switcher
+										.sliders-switcher__circle
+								.main-sliders__title(data-id="new") Новинки
+							.main-sliders__sliders
+								.stock-slider#stock.active
+									button.slick-prev.slick-arrow
+									.swiper-list
+										.swiper-wrapper
+											- for (let i = 0; i < 2; i++)
+												each title, i in ["МП Калибратор с ножами для снятия фаски 16-20-25", "ППР малошум Крест 90 110x110x50 Левый 2 плоскости", "РЕХ инструмент запресовщик + расширитель Dn16-20 (DL1225)"]
+													.swiper-slide
+														.stock-slider__slide
+															.cat-item
+																.cat-item__label
+																	.label.label--stock Акция
+																a.cat-item__img(href="#")
+																	img(src="img/photos/stock-img-"+i+".jpg", alt=title)
+																.cat-item__title
+																	a(href="#")=title
+																.cat-item__id артикул 06282
+																.cat-item__buy
+																	.cat-item__price-cont
+																		.cat-item__price 151,00 
+																			i.rub ₽
+																		.cat-item__price-bot 110,00 
+																			i.rub ₽
+																	.cat-item__counter
+																		.counter.productCounter
+																			a.counter__btn.counter__btn--minus.productCounterMinus(href="javascript:;")
+																			input(data-productid="22638" class="productItemQuantity" type="number" name="QUANTITY" autocomplete="off" value="1" min="1" max="871" step="1")
+																			a(class="counter__btn counter__btn--plus productCounterPlus" href="javascript:;")
+																	.cat-item__to-cart
+																		a.add-to-cart(href="#")
+										.swiper-pagination
+									button.slick-next.slick-arrow
+								.stock-slider#new
+									button.slick-prev.slick-arrow
+									.swiper-list
+										.swiper-wrapper
+											- for (let i = 0; i < 2; i++)
+												each title, i in ["МП Калибратор с ножами для снятия фаски 16-20-25", "ППР малошум Крест 90 110x110x50 Левый 2 плоскости", "РЕХ инструмент запресовщик + расширитель Dn16-20 (DL1225)"]
+													.swiper-slide
+														.stock-slider__slide
+															.cat-item
+																.cat-item__label
+																	.label.label--new Новинка
+																a.cat-item__img(href="#")
+																	img(src="img/photos/stock-img-"+i+".jpg", alt=title)
+																.cat-item__title
+																	a(href="#")=title
+																.cat-item__id артикул 06282
+																.cat-item__buy
+																	.cat-item__price-cont
+																		.cat-item__price 151,00 
+																			i.rub ₽
+																		.cat-item__price-bot 110,00 
+																			i.rub ₽
+																	.cat-item__to-cart
+																		a.add-to-cart(href="#")
+										.swiper-pagination
+									button.slick-next.slick-arrow
+				.main-news__cont
+					.wrapper
+						.main-news
+							.main-news__title-cont
+								.main-news__title Новости
+								.main-news__all
+									a.arrow-btn(href="#") Все новости
+							.main-news__big
+								a.big-news(href="#")
+									figure.big-news__img
+										img(src="img/photos/big-news-img.jpg")
+										figcaption.big-news__img-date 18.08.2018
+									.big-news__desc
+										.big-news__title Поздравляем с Днём работников торговли!
+										.big-news__text Дорогие работники торговли! Поздравляем вас с профессиональным праздником! Вы являетесь ...
+							.main-news__list
+								- for (let i = 0; i < 3; i++)
+									.main-news__list-item
+										a.small-news(href="#")
+											.small-news__date 18.08.2018
+											.small-news__text Как выбрать лучший смеситель? 
+												br
+												| Три простых совета
+				.main-soc__cont
+					.wrapper
+						.main-soc
+							img(src="img/photos/main-soc.jpg")
+		include inc/footer.pug
+		include inc/scripts.pug

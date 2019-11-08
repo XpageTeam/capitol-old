@@ -1,0 +1,36 @@
+.about
+
+	&__timeline
+		margin: rem(105) 0 0
+		position: relative
+
+		&:after, &:before
+			content: ""
+			position: absolute 0 * -50px
+			width: vw(335)
+			background: linear-gradient(to right, rgba(255,255,255, .0001), #fff 70%)
+			z-index: 5
+			pointer-events: none
+
+		&:after
+			right: 0
+
+		&:before
+			left: 0
+			transform: rotateY(180deg)
+
+.history
+	display: flex
+	align-items: center
+
+	&__img
+		flex: none
+		margin-right: rem(80)
+
+		img
+			display: block
+
+	&__text
+
+		.text-page
+			max-width: 560px

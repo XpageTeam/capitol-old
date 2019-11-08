@@ -1,0 +1,31 @@
+aside.filter__cont
+	.filter__btn
+		button.filter-btn Фильтр
+	.filter
+		button.filter__close
+			svg(viewBox="0 0 32 32")
+				path(d="M10,10 L22,22 M22,10 L10,22")
+		.filter__block
+			.filter__title Вид комплектующего
+			ul.filter__checkboxes
+				each title, i in ["Адаптер", "Байпас", "Вентиль", "Воздухоотводчик", "Гидравлический разделитель", "Группа безопасности", "Евроконус", "Заглушка", "Клапан балансировочный", "Клапан для гидроаккумулятора", "Клапан обратный", "Клапан препускной", "Клапан трехходовой", ]
+					li
+						.checkbox
+							input.checkbox__input(type="checkbox" id="check-"+i)
+							label.checkbox__label(for="check-"+i)=title
+		.filter__block
+			.price-filter
+				.price-filter__inputs
+					input.price-filter__input(data-min="0" name="min" type="tel" value="0")
+					input.price-filter__input(data-max="20000" name="max" type="tel" value="1000")
+				.price-filter__range
+					i.range
+			.filter-checks
+				each title, i in ["В наличии", "Акция", "Новинка"]
+					.filter-checks__item
+						.checkbox
+							input.checkbox__input(type="checkbox" id="checkd-"+i)
+							label.checkbox__label(for="checkd-"+i)=title
+		.filter__btns
+			input.default-btn.filter-submit(type="submit" value="Показать")
+			a.bordered-btn.filter-submit(href="#") Сбросить

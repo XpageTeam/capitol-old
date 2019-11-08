@@ -1,0 +1,31 @@
+footer.footer
+	.wrapper
+		.footer__top
+			.footer__logo
+				a.logo(href="#")
+					img(src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x")
+			nav.footer__menu
+				ul.head-menu
+					li.head-menu__item
+						a.head-menu__link(href="#") Каталог
+						ul.submenu
+							- for (let i = 0; i < 5; i++)
+								li.submenu__item
+									a.submenu__link(href="#") Каталог
+					each item in ["О компании", "Новости", "Доставка", "Контакты", ]
+						li.head-menu__item
+							a.head-menu__link(href="#")=item
+		.footer__bot
+			.footer__phone
+				address.f-phone
+					a(href="tel: +7 (351) 729-88-58") +7 (351) 729-88-58
+			.footer__address
+				address.f-address
+					span Челябинск, ул. Северо-Крымская, д. 18а
+			.footer__mail
+				address.f-mail
+					a(href="mailto: tdsu@tdsu.ru") tdsu@tdsu.ru
+			.footer__devaloper
+				a.developer(href="#")
+					span.developer__text Сделано в 
+					img.developer__img(src="img/developer.png", alt="Xpage")

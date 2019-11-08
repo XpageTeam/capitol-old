@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Каталог
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		
+		main#content
+			.inner-content__cont
+				.wrapper
+					.title-block
+						.title-block__crumbs
+							ul.bread-crumbs
+								li.bread-crumbs__link(itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb")
+									a(href="#" title="Главная" itemprop="url")
+										span(itemprop="title") Главная
+								li.bread-crumbs__this Каталог
+						.title-block__title
+							h1 Каталог
+					.inner-content
+						.catalog
+							each item, i in [{title: "Oventrop"}, {title: "Ванны, поддоныи мойки", list: ["Ванны", "Кухонные мойки", ]}, {title: "Водо-нагревателиp"}, {title: "Газовое оборудование", list: ["Подводка", "Краны", ]}, {title: "Гидрострелки и стальные коллекторы"}, {title: "Для дома и дач", list: ["Шланги поливочные", "Баки для сада", ]}, {title: "Запорная, регулирующая и предохранительная арматура"}, {title: "Канализация", list: ["Внутренняя", "Люки канализационные", "Наружная"]}, {title: "Комплектующие для бытовой техники"}, {title: "Котлы отопления", list: ["Котлы газовые", "Котлы электические", ]}, {title: "Насосы", list: ["Дренажные", "Глубинные", "Вибрационные"]}, {title: "Приборы учета и контроля и безопасности"}, {title: "Принадлежности для санитарной комнаты"}, {title: "Рабочий инструмент", list: ["Для работы с МП", "Для работы с PEX", ]}, {title: "Радиаторы отопления", list: ["Стальные", "Комплектующие", ]}, {title: "Санфаянс", list: ["Российский", "Инсталляция", "Крепления", ]}, {title: "Сифоны, арматура и комплектующие"}, {title: "Смесители", list: ["BAVARIA", "ОПТИМА", "W.Zorge", ]}, {title: "Стальные элементы трубопровода"}, {title: "Трубы и фитинги", list: ["Фитинги чугунные", "Хомуты", ]}, {title: "Теплый пол"}, {title: "Фильтры"}, {title: "Хозтовары и расходные материалы"}, ]
+								.catalog__item
+									.main-cat-block__item
+										.main-cat-block__item-desc
+											a.main-cat-block__item-title(href="#")=item.title
+											if (item.list)
+												ul.main-cat-block__item-list
+													each link in item.list
+														li
+															a(href="#")=link
+										figure.main-cat-block__item-img
+											img(src="img/photos/cat1-"+i+".jpg", alt=item.title)
+		include inc/footer.pug
+		include inc/scripts.pug
