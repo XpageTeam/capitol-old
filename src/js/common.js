@@ -1,5 +1,6 @@
 import $ from "jquery"
 import is from "is_js"
+import Cookies from "js-cookie"
 import Swiper from "swiper/dist/js/swiper.js";
 import "./main-sliders.js"
 // import "./team.js"
@@ -64,6 +65,14 @@ closeMainSubmenu = e => {
 };
 
 document.addEventListener("DOMContentLoaded", e => {
+
+	$('.cookie-cont .btn').click(function(){
+		Cookies.set('cookie', true, { expires: 1 });
+		$('body').addClass('js__cookie-hidden');
+	});
+
+
+
 	let swiper = new Swiper(".main-slider", {
 		effect: "fade",
 		slidesPerView: 1,
